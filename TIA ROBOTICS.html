@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIA ROBOTICS | HOME</title>
+    <link rel="stylesheet" href="estilos/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="estilos/slick-personalizado.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/374b632105.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Contenido de la página -->
+    <header>
+        <div id="logo">
+            <img src="imagenes/logo_tia.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="ACERCA DE.html">ACERCA DE</a></li>
+                <li><a href="EXPERIENCIA.html">EXPERIENCIA</a></li>
+                <li><a href="PRODUCTOS.html">PRODUCTOS</a></li>
+                <li><a href="ventana4.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="videos-slider">
+        <div class="video">
+          <video width="100%" muted id="video1"> 
+            <source src="videos/vid1_tiar.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video">
+          <video width="100%" muted id="video2">
+            <source src="videos/tia_ingenieria.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video">
+          <video width="100%" muted id="video3">
+            <source src="ruta_al_video3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- Agrega más elementos de video según sea necesario -->
+      </div>
+
+    <footer>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </footer>
+
+    
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Inicializa el slider de videos una sola vez con las opciones necesarias
+            $('.videos-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 6000,
+                dots: true,
+                arrows: false
+            });
+
+            // Agrega las flechas personalizadas al contenedor del slider
+            $('.videos-slider').append('<div class="custom-prev-arrow"><i class="fas fa-chevron-left"></i></div>');
+            $('.videos-slider').append('<div class="custom-next-arrow"><i class="fas fa-chevron-right"></i></div>');
+
+            // Agrega eventos de clic para controlar el slider con las flechas personalizadas
+            $('.custom-prev-arrow').click(function() {
+                $('.videos-slider').slick('slickPrev');
+            });
+
+            $('.custom-next-arrow').click(function() {
+                $('.videos-slider').slick('slickNext');
+            });
+
+            // Reproduce solo el primer video automáticamente al cargarse la página
+            $('#video1')[0].play();
+
+            // Detecta cuando se cambia de slide y reproduce el video correspondiente
+            $('.videos-slider').on('afterChange', function(event, slick, currentSlide){
+                var currentVideo = $('#video' + (currentSlide + 1))[0];
+                currentVideo.play();
+            });
+
+             // Pausa el video actual cuando se cambia a otro slide
+             $('.videos-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                var currentVideo = $('#video' + (currentSlide + 1))[0];
+                currentVideo.pause();
+            });
+        });
+    </script>
+</body>
+
+</html>

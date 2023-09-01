@@ -1,0 +1,94 @@
+ /* Cambiar el color de los puntos de navegación */
+.slick-dots li button:before {
+  color: #1A3EDC;
+}
+
+/* Cambiar el tamaño de las flechas de navegación */
+.slick-prev:before,
+.slick-next:before {
+  font-family: "Font Awesome";
+  font-size: 24px;
+  color: #000;
+  opacity: 0.5;
+}
+
+.slick-prev:before {
+  content: "\f053";
+}
+
+.slick-next:before {
+  content: "\f054";
+}
+
+/* Cambiar el color de fondo del slider */
+.videos-slider {
+  background-color: #f0f0f0;
+}
+
+
+/* Estilo personalizado para las flechas */
+.videos-slider .custom-prev-arrow,
+.videos-slider .custom-next-arrow {
+    position: absolute;
+    top: calc(50% - 40px); /* Ajusta el valor -30px según sea necesario */
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.videos-slider .custom-prev-arrow {
+  left: 5px; /* Alinea la flecha de la izquierda en el lado izquierdo del video */
+}
+
+.videos-slider .custom-next-arrow {
+  right: 5px; /* Alinea la flecha de la derecha en el lado derecho del video */
+}
+
+.videos-slider .custom-prev-arrow i,
+.videos-slider .custom-next-arrow i {
+    color: #636262; /*Cambia color de las flechas de los sliders*/
+    font-size: 60px;
+}
+
+/* Estilo personalizado para los puntos de navegación */
+.videos-slider .slick-dots {
+  position: absolute;
+  bottom: 10px; /* Ajusta la distancia inferior según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.videos-slider .slick-dots li {
+  margin: 0 5px; /* Ajusta el espaciado horizontal entre los puntos según sea necesario */
+}
+
+.videos-slider .slick-dots li button {
+  width: 15px; /* Ajusta el ancho de los puntos según sea necesario */
+  height: 15px; /* Ajusta la altura de los puntos según sea necesario */
+  border-radius: 50%; /* Para que los puntos sean círculos */
+  background-color:  #A1A1A1; /* Cambia el color de fondo de los puntos */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0; /*Oculta el texto de de los dots del slider*/
+}
+
+.videos-slider .slick-dots li.slick-active button {
+  background-color: #1A3EDC; /* Cambia el color de fondo del punto activo */
+}
+
+
+.video video {
+  max-width: 100%;
+  height: 78vh; /* Ajusta el valor según desees la altura del video */
+  object-fit: cover;
+}

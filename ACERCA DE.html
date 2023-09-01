@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIA ROBOTICS | ACERCA DE</title>
+    <link rel="stylesheet" href="estilos/estilo_acercade.css">
+    <!-- Enlaces a Swiper y sus estilos CSS desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/374b632105.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Enlaces a hojas de estilo CSS, fuentes, etc. -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Obtiene la URL de la página actual
+          var url = window.location.pathname.split("/").pop();
+  
+          // Busca todos los enlaces en el menú y agrega la clase .activo al enlace cuya URL coincide
+          var enlaces = document.getElementsByClassName('enlace');
+          for (var i = 0; i < enlaces.length; i++) {
+              if (enlaces[i].getAttribute('href') === url) {
+                  enlaces[i].classList.add('activo');
+                  break;
+              }
+          }
+      });
+  </script>
+</head>
+
+<body>
+    <!-- Contenido visible de la página -->
+    <header>
+        <div id="logo">
+            <img src="imagenes/logo_tia.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="TIA ROBOTICS.html" class="enlace"> INICIO</a></li>
+                <li><a href="ACERCA DE.html" class="enlace"> ACERCA DE</a></li>
+                <li><a href="EXPERIENCIA.html" class="enlace"> EXPERIENCIA</a></li>
+                <li><a href="PRODUCTOS.html" class="enlace"> PRODUCTOS</a></li>
+                <li><a href="ventana4.html" class="enlace"> CONTACTO</a></li>
+            </ul>
+        </nav>
+        <!-- Encabezado de la página (logotipo, menú de navegación, etc.) -->
+    </header>
+
+    <main>
+
+      <section>
+        <div class="skewed"></div>
+      </section>
+
+        <!-- Contenido principal de la página -->
+        <section class="contenedorT">
+            <h1>¿QUIENES SOMOS?</h1>
+            <h2 class="h2derecha">ACERCA DE</h2>
+            <!-- Secciones o bloques de contenido -->
+        </section>
+
+        <section class="contenedorPunico">
+            <p> Somos una empresa internacionalmente exitosa y orgullosamente mexicana,
+                fundada en 1994. proveedores de servicios y equipos de automatización para la industria en general.
+            </p>
+        </section>
+        
+        <section class="contenedorT">
+            <h2 class="t2centrado">¿QUE HACEMOS?</h2>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <!-- Diapositivas con imágenes -->
+                  <div class="swiper-slide">
+                    <img src="imagenes/lineaproduccion.jpg" alt="Imagen 1">
+                  </div>
+              
+                  <div class="swiper-slide">
+                    <img src="imagenes/fondotxt.jpg" alt="Imagen 2">
+                  </div>
+              
+                  <div class="swiper-slide">
+                    <img src="imagenes/aut.jpg" alt="Imagen 3">
+                  </div>
+            
+                  <div class="swiper-slide">
+                    <img src="imagenes/nid.jpg" alt="Imagen 4">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="imagenes/.jpg" alt="Imagen 5">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="imagenes/d.jpg" alt="Imagen 6">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="imagenes/n.jpg" alt="Imagen 7">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="imagenes/id.jpg" alt="Imagen 8">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="imagenes/id.jpg" alt="Imagen 9">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="imagenes/id.jpg" alt="Imagen 10">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="imagenes/id.jpg" alt="Imagen 11">
+                  </div>
+
+            </div>
+  
+        <!-- Si necesitas paginación -->
+        <div class="swiper-pagination"></div>
+  
+        <!-- Si necesitas botones de navegación -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+  
+        <!-- Si necesitas una barra de desplazamiento -->
+        <div class="swiper-scrollbar"></div>
+        </div>
+        </section>
+
+        <section class="contenedorT">
+          <h2 class="t2cen">CASOS DE EXITO</h2>
+        </section>
+
+      <section class="contenedorP">
+        <p class="parrafoCentrado">Treviño Industrial Automation, cuenta con amplia experiencia en el mercado, estos son solo algunos de nuestros casos de exito:
+        </p>
+      </section> 
+
+    <section class="galeria">
+      <a href= "#image1"> <img src="imagenes/lineaproduccion.jpg" alt=""></a>
+      <a href= "#image2"> <img src="imagenes/fondotxt.jpg" alt=""></a>
+      <a href= "#image3"> <img src="imagenes/aut.jpg" alt=""></a>
+      <a href= "#image4"> <img src="imagenes/nid.jpg" alt=""></a>
+      <a href= "#image5"> <img src="imagenes/imgg5" alt=""></a>
+      <a href= "#image6"> <img src="imagenes/imgg6" alt=""></a>
+    </section>
+
+    <article class="light-box" id="image1">
+      <a href="#image6" class="next"> <i class="fa-solid fa-arrow-left"></i> </a>
+      <img src="imagenes/lineaproduccion.jpg" alt="">
+      <a href="#image2" class="next"> <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#section.galeria" class="close"><i class="fa-solid fa-xmark"></i></a>
+    </article>
+
+    <article class="light-box" id="image2">
+      <a href="#image1" class="next"> <i class="fa-solid fa-arrow-left"></i> </a>
+      <img src="imagenes/fondotxt.jpg" alt="">
+      <a href="#image3" class="next"> <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#section.galeria" class="close"><i class="fa-solid fa-xmark"></i></a>
+    </article>
+
+    <article class="light-box" id="image3">
+      <a href="#image2" class="next"> <i class="fa-solid fa-arrow-left"></i> </a>
+      <img src="imagenes/aut.jpg" alt="">
+      <a href="#image4" class="next"> <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#section.galeria" class="close"><i class="fa-solid fa-xmark"></i></a>
+    </article>
+
+    <article class="light-box" id="image4">
+      <a href="#image3" class="next"> <i class="fa-solid fa-arrow-left"></i> </a>
+      <img src="imagenes/nid.jpg" alt="">
+      <a href="#image5" class="next"> <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#section.galeria" class="close"><i class="fa-solid fa-xmark"></i></a>
+    </article>
+
+    <article class="light-box" id="image5">
+      <a href="#image4" class="next"> <i class="fa-solid fa-arrow-left"></i> </a>
+      <img src="imagenes/imgg5" alt="">
+      <a href="#image6" class="next"> <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#section.galeria" class="close"><i class="fa-solid fa-xmark"></i></a>
+    </article>
+
+    <article class="light-box" id="image6">
+      <a href="#image5" class="next"> <i class="fa-solid fa-arrow-left"></i> </a>
+      <img src="imagenes/imgg6" alt="">
+      <a href="#image1" class="next"> <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#section.galeria" class="close"><i class="fa-solid fa-xmark"></i></a>
+    </article>
+
+        <section class="contenedorT">
+            <h2 class="t2centrado">PROVEEDORES</h2>
+        </section>
+
+        <section class="contenedorP">
+            <p class="parrafoCentrado">Contamos con autorizaciones oficiales de las marcas principales en equipos de control y automatizacion,
+             haciendonos lideres en la venta y uso de equipos, estos son algunos de nuestros principales proveedores:
+            </p>
+        </section>    
+      
+        <div class="logos-container">
+          <div class="logo-wrapper">
+              <img src="imagenes/logoVIPA.png" alt="logoVIPA" class="logo">
+              <div class="linea-vertical"></div>
+          </div>
+          <div class="logo-wrapper">
+              <img src="imagenes/logoABB.png" alt="logoABB" class="logo">
+              <div class="linea-vertical"></div>
+          </div>
+          <div class="logo-wrapper">
+              <img src="imagenes/logoYaskawa.png" alt="logoYaskawa" class="logo">
+              <div class="linea-vertical"></div>
+          </div>
+          <div class="logo-wrapper">
+              <img src="imagenes/logoSiemens.png" alt="logoSiemens" class="logo">
+              <div class="linea-vertical"></div>
+          </div>
+          <div class="logo-wrapper">
+              <img src="imagenes/logoAllenBradley-Rockwell.png" alt="logoAllanBRockwell" class="logo">
+              <div class="linea-vertical"></div>
+          </div>
+          <div class="logo-wrapper">
+              <img src="imagenes/logoOmron.png" alt="logoOmron" class="logo">
+              <div class="linea-vertical"></div>
+          </div>
+          <div class="logo-wrapper">
+              <img src="imagenes/logoInvertekDrives.png" alt="logoInvertekDrives" class="logo">
+          </div>
+          <div class="logo-wrapper">
+              <img src="imagenes/logoEpson.png" alt="logoEpson" class="logo">
+          </div>
+      </div>
+            <!-- Secciones o bloques de contenido -->
+            <div class="separator"></div> <!-- Primera línea horizontal -->
+
+            <footer>
+              <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com" target="_blank"> <i class="fab fa-tiktok"></i></a>
+              <a href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+            </footer>
+
+            <div class="separator2"></div> <!-- Segunda línea horizontal -->
+    </main>
+
+    <!-- Scripts de JavaScript, si es necesario -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+          // Parámetros opcionales
+          direction: 'horizontal', // Cambiar a 'horizontal' para el desplazamiento lateral
+          loop: true, // Habilitar el bucle continuo
+          effect: 'coverflow', // Efecto de superposición de imágenes = coverflow
+          slidesPerView: 3,
+          spaceBetween: 10,
+          autoplay: 3000,
+          clickable: true,
+          
+          // Otros parámetros de Swiper (pagination, navigation, etc.)
+          pagination: {
+            el: '.swiper-pagination', // Contenedor de la paginación
+          },
+          navigation: {
+            nextEl: '.swiper-button-next', // Contenedor del botón siguiente
+            prevEl: '.swiper-button-prev', // Contenedor del botón anterior
+          },
+          scrollbar: {
+            el: '.swiper-scrollbar', // Contenedor de la barra de desplazamiento
+          },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@200&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family:  'Chakra Petch', sans-serif;
+    border-radius: 10px;
+    position: sticky; /* Cambio a position: sticky; */
+    top: 0; /* Asegura que el encabezado se quede en la parte superior */
+    z-index: 100; /* Asegura que el encabezado esté por encima del contenido */
+     /* Agrega una sombra en la parte inferior para destacar el encabezado */
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+header a {
+    text-decoration: none;
+    color: #1A3EDC;
+    font-size: 15px;
+  }
+
+/* Estilo para el enlace activo */
+header a.activo {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+/* Estilo para el enlace activo */
+header a.activo,
+header a.enlace:hover {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+nav ul li {
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+  }
+  
+nav ul li:first-child {
+    margin-left: auto; /* Alinea el primer enlace a la derecha */
+  }
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+    float: left; /* Añade esta línea para alinear el logo a la izquierda */
+  }
+  
+#logo img {
+    width: 120px; /* Ajusta el ancho de la imagen según tus necesidades */
+  }
+
+  .skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: rgb(26,62,220);
+    background: linear-gradient(90deg, rgba(26,62,220,1) 0%, rgba(255,255,255,1) 100%);
+    z-index: -1;
+    transform: skewY(-27deg);
+    transform-origin: top left;
+    box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.1);
+  }
+
+  .contenedorT{
+    text-align: center;
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 25px;
+    color: #000000;
+    margin-right: 35px; /* Ajusta este valor según tus preferencias */
+  }
+
+  h1{
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 35px;
+    color: #000000;
+}
+
+  .h2izquierda {
+    float: left;
+    color: #ffffff;
+    font-size: 25px;
+    margin-top: -75px;
+}
+
+  .contenedorP {
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 27px;
+    margin-top: -20px;
+    text-align: center;
+    width: 80%; /* Cambiado el ancho al 80% */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+  .contenedorP p {
+    text-align: justify;
+    color: #000000;
+}
+
+  .contenedorPH2{
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 27px;
+    margin-top: -20px;
+    text-align: center;
+    width: 80%; /* Cambiado el ancho al 80% */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+  .contenedorPH2 p{
+    text-align: center;
+  }
+
+/*Estilos del carrousel de logos*/
+
+.logo-carousel {
+  overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+  white-space: nowrap; /* Evita que los logos se desplacen en varias líneas */
+}
+
+.logo-wrapper {
+  display: inline-block; /* Alinea los logos en una línea horizontal */
+  margin-right: 20px; /* Espacio entre logos */
+  animation: scroll 20s linear infinite; /* Animación de desplazamiento */
+}
+
+.logo-carousel img{
+  width: 30vh;
+  height: 30vh;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%); /* Inicia el desplazamiento desde la derecha */
+  }
+  100% {
+      transform: translateX(-100%); /* Termina el desplazamiento en la izquierda */
+  }
+}
+
+/* Estilos de la galeria */
+.galeria{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 95%;
+  margin: auto;
+  grid-gap: 10px;
+  padding: 40px 0;
+  overflow: hidden;
+  margin-top: -30px;
+}
+
+.galeria > a{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.galeria img{
+  width: 100%;
+  vertical-align: top;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.galeria a:hover img{
+  filter: blur(2px);
+  transform: rotate(10deg) scale(1.3);
+}
+
+.light-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform .3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+
+.light-box img{
+  width: 75vw;
+  max-height: 70vh;
+}
+
+.light-box:target{
+  transform: scale(1);
+}
+
+.close{
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #1A3EDC;
+  color: #ffffff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.next{
+  display: block;
+  background: #1A3EDC;
+  color: #ffffff;
+  height: 20px;
+  width: 25px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+} 
+
+/*Parte responiva de galeria a pantallas mas pequeñas */
+@media screen and (max-widht:400px){
+  .galeria{
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .close{
+      top: 20px;
+      right: 20px;
+  }
+}
+
+/*Parte de Logros Destacados*/
+.logos-containerLD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logoLD {
+  height: auto;
+  margin: 10px;
+  width: 200px; /* Asegura que la imagen no se desborde */
+}
+
+.larger-image {
+  margin-top: 25px;
+  width: 200px; /* Establece el ancho al 100% para que se ajuste */
+}
+
+.divider {
+  height: 100px;
+  border-right: 3px solid rgb(169, 168, 168); /* Color y estilo de la línea */
+  margin: 0 20px;
+}
+
+/*Estilos del pie de pagina*/
+
+.separator {
+  margin-bottom: 20px;
+  align-content: center;
+  width: 90%;
+  height: 1.5px;
+  background-color: #000000;
+  margin: 1px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+.separator2{
+  align-content: center;
+  width: 90%;
+  height: 1.5px;
+  background-color: #1A3EDC;
+  margin: -1px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+/* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+footer a:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1.5px; /* Ancho de la línea */
+  height: 20px; /* Altura de la línea */
+  background-color: #1A3EDC; /* Color de la línea */
+  margin-left: 10px; /* Espacio entre el icono y la línea */
+}
+
+footer a {
+  display: inline-block;
+  margin: 0 5px; /* Espacio entre los iconos */
+  color: #0f0f0f;
+  font-size: 25px; /* Tamaño de fuente de los iconos */
+  position: relative;
+}
+
+/* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
+footer a:hover {
+  opacity: 0.7;
+}

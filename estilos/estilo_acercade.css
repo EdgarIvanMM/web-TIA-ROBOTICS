@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@200&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family:  'Chakra Petch', sans-serif;
+    border-radius: 10px;
+    position: sticky; /* Cambio a position: sticky; */
+    top: 0; /* Asegura que el encabezado se quede en la parte superior */
+    z-index: 100; /* Asegura que el encabezado esté por encima del contenido */
+     /* Agrega una sombra en la parte inferior para destacar el encabezado */
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    text-decoration: none;
+    color: #1A3EDC;
+    font-size: 15px;
+}
+
+/* Estilo para el enlace activo */
+header a.activo {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+/* Estilo para el enlace activo */
+header a.activo,
+header a.enlace:hover {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+  
+nav ul li {
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+  
+nav ul li:first-child {
+    margin-left: auto; /* Alinea el primer enlace a la derecha */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+    float: left; /* Añade esta línea para alinear el logo a la izquierda */
+}
+  
+#logo img {
+    width: 120px; /* Ajusta el ancho de la imagen según tus necesidades */
+}
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: #1A3EDC;
+    z-index: -1;
+    transform: skewY(16deg);
+    transform-origin: top right;
+    box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorT{
+    text-align: center;
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 30px;
+    margin-bottom: -20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+h1{ 
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.h2derecha{
+    float: right;
+    color: #ffffff;
+    font-size: 25px;
+    margin-right: 1px;
+    margin-top: -85px;
+}
+
+h2{
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 35px;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedorP{
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    align-content: center;
+    text-align: center;
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 27px;
+    margin-top: -60px;
+    margin-bottom: -10px;
+}
+
+.contenedorP p {
+    text-align: justify;
+}
+
+.contenedorPunico{
+    width: 80%;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 27px;
+   
+    text-align: center;
+    width: 80%; /* Cambiado el ancho al 80% */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.contenedorPunico p {
+    text-align: justify;
+}
+
+@keyframes desplazamiento-izquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animar-texto {
+    animation: desplazamiento-izquierda 3s ease-out;
+    
+}
+
+/* Estilos CSS personalizados para el contenedor de Swiper */
+.swiper {
+    width: 100%; /* Utiliza el 100% del ancho disponible */
+    height: 600px; /* Ajusta la altura del slider según tus necesidades */
+    margin: 0 auto; /* Centrar el slider horizontalmente */
+    position: relative; /* Asegurar que el contenedor tenga posición relativa */
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+}
+
+/* Estilos para las diapositivas del slider */
+.swiper-slide {
+    opacity: 0.7; /* Establecer opacidad para que las imágenes se vean más tenues */
+    transition: opacity 0.3s ease-in-out; /* Agregar transición suave para la opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.swiper-slide img {
+    width: 100%; /* Establecer el ancho de las imágenes */
+    height: 100%; /* Establecer la altura de las imágenes */
+    object-fit: cover; /* Ajustar el tamaño de la imagen manteniendo la relación de aspecto */
+}
+
+/* Estilo para la imagen central (imagen actual) */
+.swiper-slide-active {
+    opacity: 1; /* Establecer la opacidad para la imagen actual */
+    transform: scale(1); /* Ajustar el tamaño de la imagen actual para resaltarla */
+    z-index: 2; /* Asegurarse de que la imagen actual esté por encima de las otras */
+    transition: transform 0.3s ease-in-out; /* Agrega una transición para suavizar el efecto */
+}
+
+/* Estilo para las imágenes anterior y siguiente */
+.swiper-slide-prev,
+.swiper-slide-next {
+    opacity: 0.7; /* Establecer opacidad para que se vean más tenues */
+    transform: scale(0.9); /* Ajustar el tamaño de las imágenes izquierda y derecha */
+    z-index: 1; /* Asegurarse de que las imágenes izquierda y derecha estén detrás de la central */
+    transition: transform 0.3s ease-in-out; /* Agrega una transición para suavizar el efecto */
+}
+
+.swiper-slide-prev {
+    transform: translateX(-50%) scale(0.9); /* Posicionar y ajustar el tamaño de la imagen anterior */
+}
+
+.swiper-slide-next {
+    transform: translateX(50%) scale(0.9); /* Posicionar y ajustar el tamaño de la imagen siguiente */
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%; /* Centrar la paginación horizontalmente */
+    transform: translateX(-50%); /* Centrar la paginación horizontalmente */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente los botones de navegación */
+    transform: translateY(-50%); /* Centrar verticalmente los botones de navegación */
+    width: 40px; /* Ajustar el ancho de los botones */
+    height: 40px; /* Ajustar la altura de los botones */
+    /*background-color: rgba(0, 0, 0, 0.5); /* Establecer un fondo semi-transparente para los botones */
+    color: #ffffff; /* Establecer el color de los botones */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%; /* Ajustar el borde redondeado de los botones */
+}
+
+.swiper-button-prev {
+    left: 20px; /* Alinear el botón previo a la izquierda */
+}
+
+.swiper-button-next {
+    right: 20px; /* Alinear el botón siguiente a la derecha */
+}
+
+/* Estilo para los logos */
+.logo {
+    width: 250px; /* Ajusta el tamaño de los logos según tus necesidades */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    position: relative; /* Añade posición relativa para los logos */
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para el contenedor de logos */
+.logos-container {
+    display: flex; /* Mostrar los logos en una fila */
+    justify-content: center; /* Centrar horizontalmente los logos */
+    align-items: center; /* Centrar verticalmente los logos */
+    flex-wrap: wrap; /* Permite que los logos se envuelvan en varias líneas si no caben en una sola */
+    margin-top: -30px; /* Agrega margen entre el párrafo y los logos */
+}
+
+/* Margen entre los logos */
+.logo-wrapper {
+    margin: 20px; /* Aumenta el espacio entre los logos según tus necesidades */
+}
+
+/*Animacion cuandoe l cursor pase por encima de algun logo*/
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.t2centrado{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.t2cen{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.parrafoCentrado{
+    text-align: center;
+    text-align: justify;
+}
+
+.separator {
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #000000;
+    margin: 10px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+.separator2{
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #1A3EDC;
+    margin: 10px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+/* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: -10px;
+  }
+  
+  footer a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1.5px; /* Ancho de la línea */
+    height: 20px; /* Altura de la línea */
+    background-color: #1A3EDC; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el icono y la línea */
+  }
+  
+  footer a {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre los iconos */
+    color: #0f0f0f;
+    font-size: 25px; /* Tamaño de fuente de los iconos */
+    position: relative;
+  }
+  
+  /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
+  footer a:hover {
+    opacity: 0.7;
+  }
+
+/* Estilos de la galeria */
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.galeria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+}
+
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.light-box img{
+    width: 75vw;
+    max-height: 70vh;
+}
+
+.light-box:target{
+    transform: scale(1);
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #1A3EDC;
+    color: #ffffff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next{
+    display: block;
+    background: #1A3EDC;
+    color: #ffffff;
+    height: 20px;
+    width: 25px;
+    line-height: 20px;
+    text-decoration: none;
+    text-align: center;
+} 
+
+/*Parte responiva de galeria a pantallas mas pequeñas */
+@media screen and (max-widht:400px){
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+}
