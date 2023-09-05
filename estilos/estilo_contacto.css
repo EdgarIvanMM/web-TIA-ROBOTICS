@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@200&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family:  'Chakra Petch', sans-serif;
+    border-radius: 10px;
+    position: sticky; /* Cambio a position: sticky; */
+    top: 0; /* Asegura que el encabezado se quede en la parte superior */
+    z-index: 100; /* Asegura que el encabezado esté por encima del contenido */
+    /* Agrega una sombra en la parte inferior para destacar el encabezado */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el enlace activo con la barra encima */
+header a.current {
+    position: relative; /* Añade posición relativa al enlace */
+  }
+  
+  header a.current::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Altura de la barra */
+    background-color: #1A3EDC; /* Color de la barra */
+    position: absolute;
+    top: -2px; /* Ajusta la posición para que esté por encima del enlace */
+    left: 0;
+  }
+
+header a {
+    text-decoration: none;
+    color: #1A3EDC;
+    font-size: 15px;
+}
+
+/* Estilo para el enlace activo */
+header a.activo {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+/* Estilo para el enlace activo */
+header a.activo,
+header a.enlace:hover {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+  
+nav ul li {
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+  
+nav ul li:first-child {
+    margin-left: auto; /* Alinea el primer enlace a la derecha */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+    float: left; /* Añade esta línea para alinear el logo a la izquierda */
+    cursor: pointer;
+}
+  
+#logo img {
+    width: 120px; /* Ajusta el ancho de la imagen según tus necesidades */
+}
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: rgb(26,62,220);
+    background: linear-gradient(90deg, rgba(26,62,220,1) 0%, rgba(255,255,255,1) 100%);
+    z-index: -1;
+    transform: skewY(-27deg);
+    transform-origin: top left;
+    box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.1);
+  }
+
+
+/*Estilos para el formulario*/
+
+main{
+    font-family: 'Chakra Petch', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+}
+
+.input-group{
+    font-family: 'Chakra Petch', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h1{
+    font-family: 'Chakra Petch', sans-serif;
+    color: black;
+    font-size: 35px;
+}
+
+label{
+    font-family: 'Chakra Petch', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+input, textarea{
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #4D85E0;
+    border: 1px solid #1A3EDC;
+    color: #283629;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #b5cab6;
+}
+
+.form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-txt a{
+    color: #1A3EDC;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn{
+    font-size: 16px;
+    color: #ffffff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #1A3EDC;
+    box-shadow: 0 0 20px rgba(0, 30, 255, 0.4);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #3366CC;
+}
+
+.contact-info{
+    z-index: 100000;;
+}
+
+/* Estilo para el icono de información */
+#contact-icon {
+   
+    float: left; /* Flota el icono a la izquierda */
+    margin-right: 10px; /* Ajusta el margen derecho para separarlo del contenido */
+    top: 50%; /* Coloca el icono en la mitad vertical */
+    transform: translateY(-50%); /* Alinea verticalmente el centro del icono */
+    cursor: pointer;
+  }
+  
+  /* Estilo para el icono cuando se coloca el mouse encima */
+  #contact-icon:hover {
+    color: #1A3EDC; /* Cambia el color al pasar el mouse por encima */
+  }
+
+
+/*Estilos del pie de pagina*/
+
+.separator {
+    margin-bottom: 100px;
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #000000;
+    margin: 1px auto; /* Ajusta el espacio entre las líneas y los íconos */
+  }
+  
+  .separator2{
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #1A3EDC;
+    margin: -1px auto; /* Ajusta el espacio entre las líneas y los íconos */
+  }
+  
+  /* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  footer a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1.5px; /* Ancho de la línea */
+    height: 20px; /* Altura de la línea */
+    background-color: #1A3EDC; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el icono y la línea */
+  }
+  
+  footer a {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre los iconos */
+    color: #0f0f0f;
+    font-size: 25px; /* Tamaño de fuente de los iconos */
+    position: relative;
+  }
+  
+  /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
+  footer a:hover {
+    opacity: 0.7;
+  }
+  
+
+  /*RESPONSIVE*/
+  @media(max-width:991px){
+
+    body{
+        padding: 30px;
+    }
+
+    form{
+        padding: 30px;
+        width: 100%;
+    }
+
+    input{
+        padding: 15px;
+    }
+  }
+
+
+  /*
+  Poner icono desplegable
+  editar videos
+  editar imagenes
+  */

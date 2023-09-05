@@ -1,185 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@200&display=swap');
 
-body {
-    background-image:url('imagenes/img fondo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 20%;
+html, body {
+  overflow: hidden; /* Esto oculta el scrollbar */
+  height: 100%; /* Establece la altura al 100% del viewport */
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(200, 200, 200, 0.7); /* Color de transparencia */
-    z-index: -1; /* Coloca el cuadro transparente detrás del contenido */
-  }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #ffffff;
-    font-family:  'Chakra Petch', sans-serif;
-    border-radius: 10px;
-    position: sticky; /* Cambio a position: sticky; */
-    top: 0; /* Asegura que el encabezado se quede en la parte superior */
-    z-index: 100; /* Asegura que el encabezado esté por encima del contenido */
-     /* Agrega una sombra en la parte inferior para destacar el encabezado */
-     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header a {
-    text-decoration: none;
-    color: #1A3EDC;
-    font-size: 15px;
-  }
-
-/* Estilo para el enlace activo */
-header a.activo {
-    background-color: #1A3EDC; /* Fondo azul */
-    color: #ffffff; /* Letra blanca */
-    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
-}
-
-/* Estilo para el enlace activo */
-header a.activo,
-header a.enlace:hover {
-    background-color: #1A3EDC; /* Fondo azul */
-    color: #ffffff; /* Letra blanca */
-    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-  }
-  
-nav ul li {
-    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
-  }
-  
-nav ul li:first-child {
-    margin-left: auto; /* Alinea el primer enlace a la derecha */
-  }
-
-#logo {
-    display: flex;
-    align-items: center;
-    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
-    float: left; /* Añade esta línea para alinear el logo a la izquierda */
-  }
-  
-#logo img {
-    width: 120px; /* Ajusta el ancho de la imagen según tus necesidades */
-  }
-
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .icono {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 200px 150px 200px 75px;
-    text-align: center;
-  }
-
-
-  .texto-icono {
-    margin-top: -20px;
-    color: #000000; /* Cambia el color del texto a negro */
-    font-family: 'Inter', light; /* Cambia la fuente del texto */
-    font-size: 24px; /* Cambia el tamaño de fuente del texto */
-    font-weight: bold; /* Cambia el peso de la fuente a negrita */
-  }
-
-  .icono:hover .texto-icono {
-    text-decoration: none; /* Quita el subrayado al hacer hover en los iconos */
-  }
-
-  .icono .texto-icono, .icono .texto-icono:hover {
-    text-decoration: none; /* Quita el subrayado a los enlaces dentro de .icono */
-  }
-
-  .container::before,
-  .container::after {
-  content: "";
-  position: absolute;
-  width: 60%;
-  border-top: 1px solid #000000;
-  top: 50%; /* Ajusta la posición vertical de las líneas */
-  transform: translateY(-50%); /* Ajusta la posición vertical de las líneas */
-  }
-
-  .container::before {
-  left: 20%;
-  margin-top: -125px; /* Ajusta el margen superior para la línea superior */
-  }
-
-  .container::after {
-  right: 20%;
-  margin-top: 100px; /* Ajusta el margen superior para la línea inferior */
-  }
-
-.footer-icons {
-  position: fixed;
-  bottom: 0;
-  left: 60px;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-icons a {
-  margin-bottom: 10px;
-}
-
-.footer-icons img.icono-destacado {
-  width: 105px;
-  margin-left: -15px; 
-  margin-top: -15px;
-}
-
-
-/* Estilos generales para todos los tamaños de pantalla */
-
-/* Estilos para pantallas 1500 (laptops)*/
-@media (max-width: 1500px) {
-  /* Ajusta los estilos para pantallas 1500 aquí */
-  body {
-    /* Modifica los estilos del cuerpo para pantallas 1500*/
-    background-image: url('imagenes/img fondo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 20%;
-  }
-
-  /* Modifica los estilos de fondo transparente 1500*/
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255); /* Color de transparencia */
-    z-index: -1; /* Coloca el cuadro transparente detrás del contenido */
-  }
-
- 
 header {
   display: flex;
   justify-content: space-between;
@@ -191,8 +17,24 @@ header {
   position: sticky; /* Cambio a position: sticky; */
   top: 0; /* Asegura que el encabezado se quede en la parte superior */
   z-index: 100; /* Asegura que el encabezado esté por encima del contenido */
-   /* Agrega una sombra en la parte inferior para destacar el encabezado */
-   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  /* Agrega una sombra en la parte inferior para destacar el encabezado */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el enlace activo con la barra encima */
+header a.current {
+  position: relative; /* Añade posición relativa al enlace */
+}
+
+header a.current::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px; /* Altura de la barra */
+  background-color: #1A3EDC; /* Color de la barra */
+  position: absolute;
+  top: -2px; /* Ajusta la posición para que esté por encima del enlace */
+  left: 0;
 }
 
 header a {
@@ -266,6 +108,7 @@ nav ul li:first-child {
 
 /* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
 footer {
+  margin-top: -3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,6 +136,4 @@ footer a {
 /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
 footer a:hover {
   opacity: 0.7;
-}
-
 }

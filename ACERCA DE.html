@@ -10,37 +10,23 @@
     <script src="https://kit.fontawesome.com/374b632105.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- Enlaces a hojas de estilo CSS, fuentes, etc. -->
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          // Obtiene la URL de la página actual
-          var url = window.location.pathname.split("/").pop();
-  
-          // Busca todos los enlaces en el menú y agrega la clase .activo al enlace cuya URL coincide
-          var enlaces = document.getElementsByClassName('enlace');
-          for (var i = 0; i < enlaces.length; i++) {
-              if (enlaces[i].getAttribute('href') === url) {
-                  enlaces[i].classList.add('activo');
-                  break;
-              }
-          }
-      });
-  </script>
 </head>
 
 <body>
     <!-- Contenido visible de la página -->
     <header>
-        <div id="logo">
+      <div id="logo">
+        <a href="TIA ROBOTICS.html">
             <img src="imagenes/logo_tia.png" alt="Logo">
-        </div>
+        </a>
+    </div>
         <nav>
             <ul>
                 <li><a href="TIA ROBOTICS.html" class="enlace"> INICIO</a></li>
-                <li><a href="ACERCA DE.html" class="enlace"> ACERCA DE</a></li>
+                <li><a href="ACERCA DE.html" class="enlace current"> ACERCA DE</a></li>
                 <li><a href="EXPERIENCIA.html" class="enlace"> EXPERIENCIA</a></li>
                 <li><a href="PRODUCTOS.html" class="enlace"> PRODUCTOS</a></li>
-                <li><a href="ventana4.html" class="enlace"> CONTACTO</a></li>
+                <li><a href="CONTACTO.html" class="enlace"> CONTACTO</a></li>
             </ul>
         </nav>
         <!-- Encabezado de la página (logotipo, menú de navegación, etc.) -->
