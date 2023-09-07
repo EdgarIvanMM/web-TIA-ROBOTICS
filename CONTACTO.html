@@ -37,6 +37,8 @@
         <!--Seccion de primer titulo H1 y titulo de ventana-->
         
 
+        <div class="content-container">
+
         <form action="https://formsubmit.co/edgar.ivanmm97@gmail.com" method="POST">
             <h1>CONTACTO</h1>
 
@@ -65,21 +67,49 @@
             </div>
         </form>
 
-        <section>
-            <div id="contact-icon">
-                <i class="fa-solid fa-circle-chevron-down"></i>
-            </div>
-
-            <!-- Agrega un div para la información de contacto y ocúltalo inicialmente -->
-            <div id="contact-info" style="display: none;">
-                <p>Correo Electrónico: correo@example.com</p>
-                <p>Número de Teléfono: +123456789</p>
-                <p>Dirección: 123 Calle Principal, Ciudad</p>
-            </div>
-
-        </section>
+        
+        </div>
 
     </main>
+
+    <!-- Icono y contenido de información -->
+<section>
+    <div class="contact-container">
+        <div id="contact-icon">
+            <i class="fa-solid fa-info-circle"></i>
+        </div>
+
+        <!-- Agrega un div para la información de contacto y ocúltalo inicialmente -->
+        <div id="contact-info" style="display: none;">
+
+            <div class="info-item">
+                <i id="email-icon" class="fa-solid fa-envelope"></i>
+                <div class="info-text">
+                    <h3>CORREO ELECTRONICO</h3>
+                    <p>tiarobotics@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i id="phone-icon" class="fa-solid fa-phone"></i>
+                <div class="info-text">
+                    <h3>NUMERO DE TELEFONO</h3>
+                    <p>+99347039119</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i id="direction-icon" class="fa-solid fa-diamond-turn-right"></i>
+            <div class="info-text">
+            <h3>DIRECCION</h3>
+            <p>C. 2 de Abril - Jesús Dionisio González 406, Independencia, 64720 Monterrey, N.L.</p>
+            </div>
+
+            </div>
+            <i id="close-icon" class="fa-solid fa-times"></i>
+        </div>
+    </div>
+</section>
     
     <div class="separator"></div> <!-- Primera línea horizontal -->
 

@@ -115,6 +115,11 @@ form{
     width: 340px;
 }
 
+.content-container {
+    display: flex;
+    align-items: center;
+  }
+
 .input-group{
     font-family: 'Chakra Petch', sans-serif;
     display: flex;
@@ -179,24 +184,102 @@ input::placeholder, textarea::placeholder{
     background-color: #3366CC;
 }
 
-.contact-info{
-    z-index: 100000;;
-}
 
 /* Estilo para el icono de información */
+.contact-container {
+    
+    position: fixed; /* Fija el contenedor en la ventana del navegador */
+    left: 10px; /* Ajusta la posición izquierda según sea necesario */
+    top: 50%; /* Coloca el contenedor en la mitad vertical */
+    transform: translateY(-50%);
+    z-index: 1000; /* Ajusta el z-index para que esté por encima del formulario */
+}
+
 #contact-icon {
-   
-    float: left; /* Flota el icono a la izquierda */
-    margin-right: 10px; /* Ajusta el margen derecho para separarlo del contenido */
-    top: 50%; /* Coloca el icono en la mitad vertical */
-    transform: translateY(-50%); /* Alinea verticalmente el centro del icono */
+    font-size: 50px;
+    
+    left: 80px; /* Ajusta la posición izquierda según sea necesario */
+    top: -15%;
+    transform: translateY(-50%);
     cursor: pointer;
+    z-index: 1000; /* Ajusta el z-index para que esté por encima del formulario */
   }
   
   /* Estilo para el icono cuando se coloca el mouse encima */
   #contact-icon:hover {
     color: #1A3EDC; /* Cambia el color al pasar el mouse por encima */
   }
+
+/* Estilo para el contenido de información de contacto */
+#contact-info {
+    font-family:  'Chakra Petch', sans-serif;
+    position: absolute;
+    left: 40px; /* Ajusta la posición izquierda para alinearla con el icono */
+    top: 50%; /* Coloca el contenido en la mitad vertical */
+    transform: translateY(-50%);
+    background-color: white; /* Agrega un fondo blanco para el contenido */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Oculta inicialmente el contenido */
+    z-index: 1000; /* Ajusta el z-index para que esté por encima del formulario */
+}
+
+/* Estilo para cada ítem de información */
+.info-item {
+    display: flex;
+    align-items: center; /* Alinea verticalmente icono y texto */
+    margin-bottom: 10px; /* Agrega espacio entre los ítems */
+}
+
+/* Estilo para el icono de cierre */
+#close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#close-icon:hover {
+    color: #dc1a1a; /* Cambia el color al pasar el mouse por encima */
+}
+
+/* Estilo para los títulos h3 */
+#contact-info h3 {
+    font-size: 18px; /* Tamaño de fuente para los títulos */
+    margin-right: 10px;
+    margin-bottom: 10px; /* Espacio entre los títulos y el párrafo */
+}
+
+/* Estilo para los párrafos p */
+#contact-info p {
+    font-size: 16px; /* Tamaño de fuente para los párrafos */
+    margin-bottom: 10px; /* Espacio entre los párrafos */
+    text-align: left; /* Alinea el texto del párrafo a la izquierda */
+}
+
+/* Estilo para los contenedores de texto */
+.info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#email-icon {
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+#phone-icon {
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+#direction-icon {
+    margin-right: 10px;
+    margin-bottom: 100px;
+}
 
 
 /*Estilos del pie de pagina*/
