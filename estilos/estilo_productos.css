@@ -86,10 +86,71 @@ nav ul li:first-child {
     width: 100%;
     height: 30%;
     background: #1A3EDC;
-    z-index: -1;
+    z-index: 10;
     transform: skewY(16deg);
     transform-origin: top right;
     box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la ventana emergente */
+.ventana {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilos para el botón de abrir la ventana */
+#abrirVentana {
+    background-color: #1A3EDC;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de cerrar la ventana */
+#cerrarVentana {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.background-image {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 1000px; /* Ajusta la altura según sea necesario */
+    
+    overflow: hidden; /* Evita que la imagen se desborde */
+    
+}
+
+.background-image img {
+    width: 100%;
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción original */
+    object-fit: cover;
+    object-position: top; /* Coloca la imagen en la parte superior del contenedor */
 }
 
 .contenedorT{
@@ -97,8 +158,11 @@ nav ul li:first-child {
     font-family:  'Chakra Petch', sans-serif;
     font-size: 30px;
     margin-bottom: -20px;
-    margin-top: 15px;
     overflow: hidden;
+}
+
+.tespecial{
+    margin-top: 830px;
 }
 
 h1{
@@ -113,97 +177,6 @@ body{
     font-family: 'Chakra Petch', sans-serif;
     color: black;
     
-}
-
-.container-icon{
-    float:right;
-    margin-right: 40px;
-    margin-top: -90px;
-    margin-bottom: -80px;
-    position: relative;
-}
-
-.container-icon .fa-solid {
-    font-size: 2em;
-    position: absolute;
-    cursor: pointer;
-}
-
-.count-products{
-    position: absolute;
-    top: 55%;
-    right: 0;
-
-    background-color:#000000;
-    color: #ffffff;
-    width: 25px;
-    height: 25%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.titulo-producto-carrito{
-    margin-top: 1px;
-}
-
-.container-cart-products{
-    position: absolute;
-    top: 50px;
-    right: 0;
-    border-radius: 5%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
-    background-color: #ffffff;
-    width: 400px;
-    z-index: 10;
-}
-
-
-/* INTENTOS DE CAMBIAR PROPIEDADES DE ICONO DE TACHA
-.custom-xmark-icon{
-    width: 600px;
-    display: flex;
-}
-
-.xmark-icon:hover{
-    stroke: #f00000;
-    cursor: pointer;
-}
-*/
-
-.cart-product{
-    display: flex;
-    
-    justify-content: space-between;
-    padding: 30px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-}
-
-.info-cart-product{
-    display: flex;
-    justify-content: space-between;
-    flex: 0.8;
-}
-
-span.total-pagar{
-    margin-top: 20px;
-    margin-left: 5px;
-}
-
-.cart-total{
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.cantidad-producto-carrito{
-    font-weight: 500;
-}
-
-.hidden-cart{
-    display: none;
 }
 
 /*Main*/
@@ -256,17 +229,136 @@ span.total-pagar{
 }
 
 .price{
+    margin-top: -5px;
     font-size: 18px;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .info-product button{
+    margin-top: -5px;
     border: none;
     background: none;
     background-color: #1A3EDC;
     color: #ffffff;
     padding: 15px 10px;
     cursor: pointer;
+}
+
+.center-button-container {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.botonL{
+    border: none;
+    background: none;
+    background-color: #1A3EDC;
+    color: #ffffff;
+    width: 60%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 0 auto; /* Esto centra horizontalmente el botón en su contenedor */
+    transition: background-color 0.3s; /* Agrega una transición suave al cambio de color */
+}
+
+.botonL:hover {
+    background-color: #0E297A; /* Cambia el color de fondo cuando se pasa el cursor sobre el botón */
+}
+
+
+/*Estilos de apartado OFERTAS*/
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: auto; /* Ajusta automáticamente la altura del contenedor */
+    max-width: 80%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    background-color: #ffffff; /* Opcional: agrega un fondo para visualizar el rectángulo */
+    margin-bottom: 20px;
+}
+
+.container-ofertas {
+    width: 70%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    padding: 20px; /* Añade espacio alrededor del contenido */
+}
+
+.itemf {
+    display: flex; /* Cambiamos a flex para poder alinear la imagen y el texto horizontalmente */
+    align-items: center; /* Centramos verticalmente el contenido dentro de .itemf */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.itemf img {
+    max-width: 150px; /* Ancho máximo para la imagen (ajústalo según tus necesidades) */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-right: 20px; /* Agrega espacio entre la imagen y el texto */
+}
+
+.info-oferta {
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinea verticalmente el contenido dentro de .info-oferta */
+    padding: 10px; /* Espacio alrededor del texto */
+    width: 100%; /* Asegura que .info-oferta ocupe todo el ancho disponible */
+}
+
+.text-info {
+    flex-grow: 1; /* Permite que los textos ocupen el espacio disponible */
+}
+
+.text-info h2,
+.text-info p.priceO,
+.text-info p.priceOferta {
+    margin: 0; /* Quita el margen para evitar espacios innecesarios */
+    width: 100%; /* Hace que los textos ocupen todo el espacio horizontal disponible */
+}
+
+.text-info p.priceO{
+    margin-top: 10px;
+    text-decoration: line-through;
+}
+
+.text-info p.priceOferta{
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.text-info button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background: none;
+    background-color: #1A3EDC;
+    color: #ffffff;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.text-info button:hover {
+    background-color: #0E297A; /* Cambia el color de fondo cuando se pasa el cursor sobre el botón */
+}
+
+.offer {
+    margin: 0;
+    color: white; /* Texto blanco */
+    background-color: red; /* Fondo rojo */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    text-align: center; /* Alinea el texto al centro del círculo */
+    padding: 5px 10px; /* Añade espacio dentro del círculo */
+    font-size: 30px; /* Tamaño de fuente más grande */
 }
 
 /*Estilos del pie de pagina*/
@@ -317,4 +409,47 @@ footer a {
 /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
 footer a:hover {
   opacity: 0.7;
+}
+
+
+/* Estilos para la ventana emergente */
+.ventana {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilos para el botón de abrir la ventana */
+#abrirVentana {
+    background-color: #1A3EDC;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de cerrar la ventana */
+#cerrarVentana {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
