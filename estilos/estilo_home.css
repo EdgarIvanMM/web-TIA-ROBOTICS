@@ -106,9 +106,13 @@ nav ul li:first-child {
     font-weight: bold; /* Cambia el peso de la fuente a negrita */
 }
 
+.video video{
+  border-radius: 10px;
+}
+
 /* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
 footer {
-  margin-top: -3px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,4 +140,127 @@ footer a {
 /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
 footer a:hover {
   opacity: 0.7;
+}
+
+/* Estilos para los iconos de redes sociales en pantallas normales (ocultos) */
+.redes-sociales {
+  display: none;
+}
+
+/* Estilos para el botón de menú hamburguesa en pantallas normales (oculto) */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/*------------RESPONSIVE-------------------*/
+
+/* Estilo para el botón de menú hamburguesa */
+.menu-icon {
+  display: none; /* Oculta el botón en tamaños de pantalla más grandes */
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-icon .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #1A3EDC;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Estilo para mostrar la navegación en dispositivos móviles */
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 10px;
+}
+
+/* Media query para mostrar el botón de menú hamburguesa y ocultar la navegación */
+@media (max-width: 768px) {
+
+  html, body {
+    overflow: none; /* Esto oculta el scrollbar */
+    height: 100%; /* Establece la altura al 100% del viewport */
+  }
+
+  .menu-icon {
+      display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+  }
+
+  nav {
+      display: none; /* Oculta la navegación en tamaños de pantalla más pequeños */
+      flex-direction: column;
+      background-color: #ffffff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      z-index: 1;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.show {
+      display: flex; /* Muestra la navegación cuando se activa */
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  nav li {
+      margin: 10px 0;
+  }
+
+  /* Estilo para el enlace activo en dispositivos móviles */
+  nav a.current::before {
+      top: 0;
+  }
+
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+
+  .redes-sociales a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1.5px; /* Ancho de la línea */
+    height: 15px; /* Altura de la línea */
+    background-color: #1A3EDC; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el icono y la línea */
+  }
+
+  .redes-sociales a {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre los iconos */
+    color: #0f0f0f;
+    font-size: 20px; /* Tamaño de fuente de los iconos */
+    position: relative;
+  }
+
+  /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
+  .redes-sociales a:hover {
+    opacity: 0.7;
+  }
+
+  footer {
+    display: none; /* Oculta todo el footer en dispositivos móviles */
+  }
 }

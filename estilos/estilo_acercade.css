@@ -269,20 +269,27 @@ h2{
 /* Estilo para el contenedor de logos */
 .logos-container {
     display: flex; /* Mostrar los logos en una fila */
+    flex-wrap: wrap; /* Permite que los logos se envuelvan en varias líneas si no caben en una sola */
     justify-content: center; /* Centrar horizontalmente los logos */
     align-items: center; /* Centrar verticalmente los logos */
-    flex-wrap: wrap; /* Permite que los logos se envuelvan en varias líneas si no caben en una sola */
-    margin-top: -30px; /* Agrega margen entre el párrafo y los logos */
+    margin-top: 20px; /* Agrega margen entre el párrafo y los logos */
 }
 
-/* Margen entre los logos */
+/* Estilo para cada logo */
 .logo-wrapper {
-    margin: 20px; /* Aumenta el espacio entre los logos según tus necesidades */
+    width: 23%; /* Establece un ancho del 23% para que haya 4 logos en una fila */
+    margin: 5px; /* Espacio entre los logos y ajuste de los lados (ajustado a 5px) */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    text-align: center; /* Centra horizontalmente cada logo */
 }
 
-/*Animacion cuandoe l cursor pase por encima de algun logo*/
+/* Estilo para la imagen del logo */
+.logo {
+    max-width: 100%; /* Evita que los logos se estiren más allá de su tamaño original */
+}
 
-.logo:hover{
+/* Animación cuando el cursor pasa por encima de algún logo */
+.logo:hover {
     transform: scale(1.1);
 }
 
