@@ -242,6 +242,7 @@ body{
     color: #ffffff;
     padding: 15px 10px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .center-button-container {
@@ -433,6 +434,39 @@ footer a:hover {
     text-align: center;
 }
 
+.contenido h2{
+    text-transform: uppercase;
+}
+
+.contenido p{
+    text-transform: uppercase;
+}
+
+.contenido button{
+    margin-top: 10px; /* Espacio entre los botones */
+    border: none;
+    background: none;
+    background-color: #1A3EDC;
+    transition: background-color 0.3s; /* Agrega una transición suave al color de fondo */
+    color: #ffffff;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%; /* Los botones ocupan todo el ancho disponible */
+}
+.contenido #llamar{
+    background-color: #25D366;
+    transition: background-color 0.3s; /* Agrega una transición suave al color de fondo */
+}
+
+.contenido button:hover {
+    background-color: #0E297A; /* Cambia el color de fondo cuando se pasa el cursor sobre el botón */
+}
+
+.contenido #llamar:hover {
+    background-color: #1E974B; /* Cambia el color de fondo cuando se pasa el cursor sobre el botón */
+}
+
 /* Estilos para el botón de abrir la ventana */
 #abrirVentana {
     background-color: #1A3EDC;
@@ -443,13 +477,18 @@ footer a:hover {
     cursor: pointer;
 }
 
-/* Estilos para el botón de cerrar la ventana */
+/* Estilos para el icono de tacha */
 #cerrarVentana {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px; /* Ancho y alto iguales para un fondo circular */
+    height: 36px;
+   background-color: rgb(250, 246, 242);
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
     cursor: pointer;
-    margin-top: 10px;
+    color: red; /* Color del icono */
 }
