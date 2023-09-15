@@ -150,7 +150,7 @@ h2{
     text-transform: uppercase;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 27px;
-   
+
     text-align: center;
     width: 80%; /* Cambiado el ancho al 80% */
     margin: 0 auto; /* Centrado horizontal */
@@ -438,7 +438,123 @@ footer {
     text-align: center;
 } 
 
-/*Parte responiva de galeria a pantallas mas pequeñas */
+/*------------RESPONSIVE-------------------*/
+
+/* Estilo para el botón de menú hamburguesa */
+.menu-icon {
+    display: none; /* Oculta el botón en tamaños de pantalla más grandes */
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #1A3EDC;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Estilo para mostrar la navegación en dispositivos móviles */
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 10px;
+  }
+  
+  /* Media query para mostrar el botón de menú hamburguesa y ocultar la navegación */
+  @media (max-width: 768px) {
+
+    .menu-icon {
+        display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+    }
+  
+    nav {
+        display: none; /* Oculta la navegación en tamaños de pantalla más pequeños */
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav.show {
+        display: flex; /* Muestra la navegación cuando se activa */
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+  
+    nav li {
+        margin: 10px 0;
+    }
+  
+    /* Estilo para el enlace activo en dispositivos móviles */
+    nav a.current::before {
+        top: 0;
+    }
+
+    .skewed {
+        height: 33%; /* Ajusta la altura para dispositivos móviles */
+        transform: skewY(26.5deg); /* Ajusta el ángulo de inclinación para dispositivos móviles */
+    }
+    
+    .h2derecha{
+        font-size: 15px;
+    }
+
+    h1{ 
+        margin-top: 35px;
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    .contenedorPunico{
+        font-size: 17px;
+    }
+
+    .contenedorPunico p {
+        text-align: center;
+    }
+
+    .contenedorP{
+        font-size: 17px;
+        margin-top: -50px;
+    }
+
+    .contenedorP p{
+        text-align: center;        
+    }
+
+    /* Estilos CSS personalizados para el contenedor de Swiper */
+    .swiper {
+    height: 250px; /* Ajusta la altura del slider según tus necesidades */
+    }
+
+    .logos-container{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  /*Parte responiva de galeria a pantallas mas pequeñas */
 @media screen and (max-widht:400px){
     .galeria{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
