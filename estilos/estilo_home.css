@@ -112,7 +112,6 @@ nav ul li:first-child {
 
 /* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
 footer {
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,11 +191,19 @@ nav li {
 
   html, body {
     overflow: none; /* Esto oculta el scrollbar */
-   
+    height: 100%; /* Establece la altura al 100% del viewport */
+  }
+
+  .header{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .menu-icon {
       display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+  }
+
+  #logo img {
+    width: 115px; /* Ajusta el ancho de la imagen según tus necesidades */
   }
 
   nav {
@@ -252,7 +259,7 @@ nav li {
     display: inline-block;
     margin: 0 5px; /* Espacio entre los iconos */
     color: #0f0f0f;
-    font-size: 20px; /* Tamaño de fuente de los iconos */
+    font-size: 110%; /* Tamaño de fuente de los iconos */
     position: relative;
   }
 
@@ -272,6 +279,7 @@ nav li {
 
   .video {
     width: 100%;
+    height: auto;
     margin-top: 3%;
     margin-bottom: 20px; /* Espacio entre los videos */
   }
@@ -284,3 +292,38 @@ nav li {
     display: none; /* Oculta todo el footer en dispositivos móviles */
   }
 }
+
+  @media (max-width: 280px)  {
+    #logo {
+      display: flex;
+      align-items: center;
+      margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+      float: left; /* Añade esta línea para alinear el logo a la izquierda */
+    }
+    
+    #logo img {
+      width: 70px; /* Ajusta el ancho de la imagen según tus necesidades */
+    }
+
+    .redes-sociales a {
+      font-size: 80%; /* Tamaño de fuente de los iconos */
+    }
+
+    .redes-sociales a:not(:last-child)::after {
+      content: "";
+      display: inline-block;
+      width: 1px; /* Ancho de la línea */
+      height: 15px; /* Altura de la línea */
+      background-color: #1A3EDC; /* Color de la línea */
+      margin-left: 7px; /* Espacio entre el icono y la línea */
+    }
+
+    .menu-icon .bar {
+      margin-top: 50px;
+      width: 25px;
+      height: 2px;
+      background-color: #1A3EDC;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  }
