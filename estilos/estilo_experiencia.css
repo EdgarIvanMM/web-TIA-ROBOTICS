@@ -340,3 +340,110 @@ footer a {
 footer a:hover {
   opacity: 0.7;
 }
+
+/*------------RESPONSIVE-------------------*/
+
+/* Estilo para el botón de menú hamburguesa */
+.menu-icon {
+  display: none; /* Oculta el botón en tamaños de pantalla más grandes */
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-icon .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #1A3EDC;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Estilo para mostrar la navegación en dispositivos móviles */
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 10px;
+}
+
+/* Media query para mostrar el botón de menú hamburguesa y ocultar la navegación */
+@media (max-width: 768px) {
+  .header{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-icon {
+      display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+  }
+
+  #logo img {
+    width: 115px; /* Ajusta el ancho de la imagen según tus necesidades */
+  }
+
+  nav {
+      display: none; /* Oculta la navegación en tamaños de pantalla más pequeños */
+      flex-direction: column;
+      background-color: #ffffff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      z-index: 1;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.show {
+      display: flex; /* Muestra la navegación cuando se activa */
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  nav li {
+      margin: 10px 0;
+  }
+
+  /* Estilo para el enlace activo en dispositivos móviles */
+  nav a.current::before {
+      top: 0;
+  }
+
+  .skewed {
+    height: 25%;
+    transform: skewY(-27deg);
+  }
+
+  .h2izquierda {
+    font-size: 15px;
+    margin-top: -120px;
+}
+
+h1{
+  
+  margin-left: 40px;
+  font-size: 32px;
+}
+
+.contenedorP {
+  font-size: 17px;
+  /*margin-top: -20px;*/
+}
+
+
+.contenedorPH2{
+  font-size: 27px;
+}
+
+
+}

@@ -192,7 +192,6 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .swiper-slide img {
@@ -260,7 +259,7 @@ h2{
 
 /* Estilo para los logos */
 .logo {
-    width: 50%; /* Ajusta el tamaño de los logos según tus necesidades */
+    width: 55%; /* Ajusta el tamaño de los logos según tus necesidades */
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
     position: relative; /* Añade posición relativa para los logos */
     transition: transform 0.3s ease;
@@ -269,7 +268,8 @@ h2{
   /* Estilo para el contenedor de logos */
   .logos-container {
     display: grid; /* Mostrar los logos en una cuadrícula */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crea columnas con un ancho mínimo de 250px */
+    grid-template-columns: repeat(4, 1fr); /* Siempre dos filas de 4 logos */
+    
     grid-gap: 10px; /* Espacio entre los logos */
     justify-items: center; /* Centrar horizontalmente los logos */
     align-items: center; /* Centrar verticalmente los logos */
@@ -547,6 +547,10 @@ footer {
     /* Estilos CSS personalizados para el contenedor de Swiper */
     .swiper {
     height: 250px; /* Ajusta la altura del slider según tus necesidades */
+    }
+
+    .logo{
+        width: 40%; /* Ajusta el tamaño de los logos según tus necesidades */
     }
 
     .logos-container{
