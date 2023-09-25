@@ -452,11 +452,22 @@ footer a:hover {
     padding: 15px 10px;
     cursor: pointer;
     border-radius: 10px;
-    width: 100%; /* Los botones ocupan todo el ancho disponible */
+    width: 50%; /* Los botones ocupan todo el ancho disponible */
 }
 .contenido #llamar{
     background-color: #25D366;
     transition: background-color 0.3s; /* Agrega una transición suave al color de fondo */
+}
+
+/* Cambia el color de fondo del botón Mercado Libre y el color de fondo al pasar el cursor */
+.btn-mercadolibre button {
+    background-color: #FFE600 !important; /* Cambia el color de fondo original del botón Mercado Libre */
+    color: #000000 !important; /* Cambia el color del texto a negro */
+    transition: background-color 0.3s; /* Agrega una transición suave al color de fondo */
+}
+
+.btn-mercadolibre button:hover {
+    background-color: #9E7703 !important; /* Color de fondo más oscuro al pasar el cursor */
 }
 
 .contenido button:hover {
@@ -484,11 +495,90 @@ footer a:hover {
     right: 10px;
     width: 16px; /* Ancho y alto iguales para un fondo circular */
     height: 36px;
-   background-color: rgb(250, 246, 242);
+    background-color: rgb(250, 246, 242);
     border-radius: 50%; /* Hace que el fondo sea circular */
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
     cursor: pointer;
     color: red; /* Color del icono */
+}
+
+/*------------RESPONSIVE-------------------*/
+
+/* Estilo para el botón de menú hamburguesa */
+.menu-icon {
+    display: none; /* Oculta el botón en tamaños de pantalla más grandes */
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #1A3EDC;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Estilo para mostrar la navegación en dispositivos móviles */
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 10px;
+  }
+
+  /* Media query para mostrar el botón de menú hamburguesa y ocultar la navegación */
+@media (max-width: 768px) {
+    .header{
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu-icon {
+        display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+    }
+  
+    #logo img {
+      width: 115px; /* Ajusta el ancho de la imagen según tus necesidades */
+    }
+  
+    nav {
+        display: none; /* Oculta la navegación en tamaños de pantalla más pequeños */
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav.show {
+        display: flex; /* Muestra la navegación cuando se activa */
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+  
+    nav li {
+        margin: 10px 0;
+    }
+  
+    /* Estilo para el enlace activo en dispositivos móviles */
+    nav a.current::before {
+        top: 0;
+    }
 }

@@ -420,7 +420,7 @@ nav li {
   }
 
   .skewed {
-    height: 25%;
+    height: 24vh;
     transform: skewY(-27deg);
   }
 
@@ -430,7 +430,6 @@ nav li {
 }
 
 h1{
-  
   margin-left: 40px;
   font-size: 32px;
 }
@@ -445,5 +444,29 @@ h1{
   font-size: 27px;
 }
 
+/*Estilos del carrousel de logos*/
+.logo-carousel img{
+  width: 20vh;
+  height: 20vh;
+}
+
+/*Parte de Logros Destacados*/
+.logoLD {
+  height: auto;
+  margin: -1vh;
+  width: 13vh; /* Asegura que la imagen no se desborde */
+}
+
+.larger-image {
+  margin: -2vh;
+  margin-top: -1vh;
+  width: 13vh; /* Establece el ancho al 100% para que se ajuste */
+}
+
+.divider {
+  height: 10vh;
+  border-right: 2px solid rgb(169, 168, 168); /* Color y estilo de la línea */
+  margin: 0 3vh;
+}
 
 }
