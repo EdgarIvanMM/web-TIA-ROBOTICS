@@ -602,7 +602,6 @@
         font-size: 20px;
     }
 
-
     .container-items{
         grid-template-columns: repeat(2, 1fr);
         height: 30vh;
@@ -637,3 +636,18 @@
     }
 
 }
+
+/*responsive ipads*/
+
+@media (min-width: 820px) and (max-width: 915px)  {
+    .skewed {
+        height: 18vh; /* Ajusta la altura para dispositivos móviles */
+        transform: skewY(30deg); /* Ajusta el ángulo de inclinación para dispositivos móviles */   
+    }
+
+    .item img{
+        width: 100%;
+        height: 10vh;
+    }
+}
+

@@ -16,7 +16,7 @@ header {
      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  /* Estilo para el enlace activo con la barra encima */
+/* Estilo para el enlace activo con la barra encima */
 header a.current {
   position: relative; /* Añade posición relativa al enlace */
 }

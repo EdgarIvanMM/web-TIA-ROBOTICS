@@ -19,9 +19,9 @@ header {
 /* Estilo para el enlace activo con la barra encima */
 header a.current {
     position: relative; /* Añade posición relativa al enlace */
-  }
+}
   
-  header a.current::before {
+header a.current::before {
     content: "";
     display: block;
     width: 100%;
@@ -30,7 +30,7 @@ header a.current {
     position: absolute;
     top: -2px; /* Ajusta la posición para que esté por encima del enlace */
     left: 0;
-  }
+}
 
 header a {
     text-decoration: none;
@@ -150,7 +150,6 @@ h2{
     text-transform: uppercase;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 27px;
-
     text-align: center;
     width: 80%; /* Cambiado el ancho al 80% */
     margin: 0 auto; /* Centrado horizontal */
@@ -173,7 +172,6 @@ h2{
 
 .animar-texto {
     animation: desplazamiento-izquierda 3s ease-out;
-    
 }
 
 /* Estilos CSS personalizados para el contenedor de Swiper */
@@ -259,7 +257,7 @@ h2{
 
 /* Estilo para los logos */
 .logo {
-    width: 55%; /* Ajusta el tamaño de los logos según tus necesidades */
+    width: 30vh; /* Ajusta el tamaño de los logos según tus necesidades */
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
     position: relative; /* Añade posición relativa para los logos */
     transition: transform 0.3s ease;
@@ -627,5 +625,33 @@ footer {
     .skewed {
         height: 20vh; /* Ajusta la altura para dispositivos móviles */
         transform: skewY(30deg); /* Ajusta el ángulo de inclinación para dispositivos móviles */   
+    }
+
+    .swiper {
+        height: 24vh; /* Ajusta la altura del slider según tus necesidades */
+    }
+
+    .logo{
+        width: 13vh; /* Ajusta el tamaño de los logos según tus necesidades */
+        margin: 3px;
+    }
+}
+
+/*responsive ipads*/
+
+@media (min-width: 820px) and (max-width: 911px)  {
+    .skewed {
+        height: 20vh; /* Ajusta la altura para dispositivos móviles */
+        transform: skewY(20deg); /* Ajusta el ángulo de inclinación para dispositivos móviles */   
+    }
+
+    /* Estilos CSS personalizados para el contenedor de Swiper */
+    .swiper {
+        height: 24vh; /* Ajusta la altura del slider según tus necesidades */
+    }
+
+    .logo{
+        width: 15vh; /* Ajusta el tamaño de los logos según tus necesidades */
+        margin: 3px;
     }
 }
