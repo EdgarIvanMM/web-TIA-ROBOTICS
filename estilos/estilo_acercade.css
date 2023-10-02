@@ -170,10 +170,6 @@ h2{
     }
 }
 
-.animar-texto {
-    animation: desplazamiento-izquierda 3s ease-out;
-}
-
 /* Estilos CSS personalizados para el contenedor de Swiper */
 .swiper {
     width: 100%; /* Utiliza el 100% del ancho disponible */
@@ -542,7 +538,12 @@ footer {
 
     /* Estilos CSS personalizados para el contenedor de Swiper */
     .swiper {
-    height: 250px; /* Ajusta la altura del slider según tus necesidades */
+    height: 45vh; /* Ajusta la altura del slider según tus necesidades */
+    width: 100vh;
+    }
+
+    .swiper-pagination{
+        display: none;
     }
 
     .logo{
