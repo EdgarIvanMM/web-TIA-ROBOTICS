@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@200&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family:  'Chakra Petch', sans-serif;
+    border-radius: 10px;
+    position: sticky; /* Cambio a position: sticky; */
+    top: 0; /* Asegura que el encabezado se quede en la parte superior */
+    z-index: 100; /* Asegura que el encabezado esté por encima del contenido */
+     /* Agrega una sombra en la parte inferior para destacar el encabezado */
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el enlace activo con la barra encima */
+header a.current {
+    position: relative; /* Añade posición relativa al enlace */
+}
+  
+header a.current::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Altura de la barra */
+    background-color: #1A3EDC; /* Color de la barra */
+    position: absolute;
+    top: -2px; /* Ajusta la posición para que esté por encima del enlace */
+    left: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #1A3EDC;
+    font-size: 15px;
+}
+
+/* Estilo para el enlace activo */
+header a.activo {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+/* Estilo para el enlace activo */
+header a.activo,
+header a.enlace:hover {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+  
+nav ul li {
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+  
+nav ul li:first-child {
+    margin-left: auto; /* Alinea el primer enlace a la derecha */
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 125px;
+    background-color: white; /* Ajusta el color de fondo según tu diseño */
+    border: 1px solid #cfcfcf; /* Añade un borde para mejorar la apariencia */
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(26, 62, 220, 0.5);
+  }
+  
+  .menu-vertical li{
+    padding: 10px;
+  }
+    
+  li:hover .menu-vertical {
+    display: block;
+  }
+  
+  .menu-vertical li:hover{
+    background-color: #1A3EDC;
+    border-radius: 10px;
+  }
+  
+  .menu-vertical li:hover a {
+    color: white;
+  }
+
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+    float: left; /* Añade esta línea para alinear el logo a la izquierda */
+}
+  
+#logo img {
+    width: 120px; /* Ajusta el ancho de la imagen según tus necesidades */
+}
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 28vh;
+    background: #1A3EDC;
+    z-index: -1;
+    transform: skewY(16deg);
+    transform-origin: top right;
+    box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorT{
+    text-align: center;
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 30px;
+    margin-bottom: -20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.contenedorP {
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 27px;
+    margin-top: -60px;
+    margin-bottom: -10px;
+}
+
+.contenedorP p {
+    text-align: center;
+}
+
+
+.contenedorPunico{
+    width: 80%;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 27px;
+    text-align: center;
+    width: 80%; /* Cambiado el ancho al 80% */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.contenedorPunico p {
+    text-align: justify;
+}
+
+.separator {
+    margin-top: 20px;
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #000000;
+    margin: 10px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+.separator2{
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #1A3EDC;
+    margin: 10px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+/* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: -10px;
+  }
+  
+  footer a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1.5px; /* Ancho de la línea */
+    height: 20px; /* Altura de la línea */
+    background-color: #1A3EDC; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el icono y la línea */
+  }
+  
+  footer a {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre los iconos */
+    color: #0f0f0f;
+    font-size: 25px; /* Tamaño de fuente de los iconos */
+    position: relative;
+  }
+  
+  /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
+  footer a:hover {
+    opacity: 0.7;
+  }
+
+  /*--------------RESPONSIVE-------------------*/
+
+  /* Estilo para el botón de menú hamburguesa */
+.menu-icon {
+    display: none; /* Oculta el botón en tamaños de pantalla más grandes */
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #1A3EDC;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Estilo para mostrar la navegación en dispositivos móviles */
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 10px;
+  }
+
+  /* Media query para mostrar el botón de menú hamburguesa y ocultar la navegación */
+@media (max-width: 768px) {
+    .header{
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu-icon {
+        display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+    }
+  
+    #logo img {
+      width: 115px; /* Ajusta el ancho de la imagen según tus necesidades */
+    }
+  
+    nav {
+        display: none; /* Oculta la navegación en tamaños de pantalla más pequeños */
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav.show {
+        display: flex; /* Muestra la navegación cuando se activa */
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+  
+    nav li {
+        margin: 10px 0;
+    }
+  
+    /* Estilo para el enlace activo en dispositivos móviles */
+    nav a.current::before {
+        top: 0;
+    }
+
+    .skewed {
+        width: 100%;
+        height: 20vh;
+    }
+
+    h1{ 
+        margin-top: 35px;
+        font-size: 25px;
+    } 
+
+    h2{
+        font-size: 26px;
+    }
+
+    .contenedorPunico{
+        font-size: 17px;
+    }
+
+    .contenedorPunico p {
+        text-align: center;
+    }
+
+    .contenedorP{
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    .contenedorP p{
+        text-align: center;        
+    }
+
+    /* Estilos CSS personalizados para el contenedor de Swiper */
+    .swiper {
+    height: 45vh; /* Ajusta la altura del slider según tus necesidades */
+    width: 100vh;
+    }
+
+    .swiper-pagination{
+        display: none;
+    }
+
+    .logo{
+        width: 40%; /* Ajusta el tamaño de los logos según tus necesidades */
+    }
+
+    .logos-container{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+
+  @media (max-width: 280px)  {
+    #logo {
+      display: flex;
+      align-items: center;
+      margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+      float: left; /* Añade esta línea para alinear el logo a la izquierda */
+    }
+    
+    #logo img {
+      width: 70px; /* Ajusta el ancho de la imagen según tus necesidades */
+    }
+
+    .menu-icon .bar {
+      margin-top: 50px;
+      width: 25px;
+      height: 2px;
+      background-color: #1A3EDC;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    .h2derecha{
+        font-size: 10px;
+    }
+
+    h1{ 
+        margin-top: 40px;
+        font-size: 20px;
+    } 
+
+    h2{
+        font-size: 21px;
+    }
+
+    .contenedorPunico{
+        font-size: 12px;
+    }
+
+    .contenedorPunico p {
+        text-align: center;
+    }
+
+    .contenedorP{
+        font-size: 12px;
+        margin-top: -50px;
+    }
+
+    .contenedorP p{
+        text-align: center;        
+    }
+
+  } 
+
+  @media (max-width: 767px) {
+    div[style="text-align: center;"] {
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    div[style="display: inline-block; margin-right: 50px; vertical-align: top;"] {
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Estilos CSS para el contenedor del video de YouTube en dispositivos móviles */
+    @media (max-width: 767px) {
+        .contenedorPunico iframe {
+            width: 100%; /* Ajusta el ancho del video al 100% del contenedor en dispositivos móviles */
+            height: auto; /* Permite que la altura del video se ajuste automáticamente según el ancho */
+        }
+    }
+
+    /* Estilos solo para dispositivos móviles */
+@media (max-width: 768px) {
+    .instagram-media {
+        margin-bottom: 20px; /* Agrega un margen inferior para separar las publicaciones */
+    }
+
+    .instagram-media p {
+        font-size: 14px; /* Reduce el tamaño de fuente del pie de foto para dispositivos móviles */
+    }
+}
+
+@media (max-width: 280px) {
+    .instagram-media p {
+        font-size: 12px; /* Reduce aún más el tamaño de fuente para dispositivos móviles muy pequeños */
+    }
+}
+
+}
+    

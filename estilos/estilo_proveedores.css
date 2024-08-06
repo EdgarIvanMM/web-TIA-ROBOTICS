@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter:wght@200&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family:  'Chakra Petch', sans-serif;
+    border-radius: 10px;
+    position: sticky; /* Cambio a position: sticky; */
+    top: 0; /* Asegura que el encabezado se quede en la parte superior */
+    z-index: 100; /* Asegura que el encabezado esté por encima del contenido */
+     /* Agrega una sombra en la parte inferior para destacar el encabezado */
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el enlace activo con la barra encima */
+header a.current {
+    position: relative; /* Añade posición relativa al enlace */
+}
+  
+header a.current::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Altura de la barra */
+    background-color: #1A3EDC; /* Color de la barra */
+    position: absolute;
+    top: -2px; /* Ajusta la posición para que esté por encima del enlace */
+    left: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #1A3EDC;
+    font-size: 15px;
+}
+
+/* Estilo para el enlace activo */
+header a.activo {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+/* Estilo para el enlace activo */
+header a.activo,
+header a.enlace:hover {
+    background-color: #1A3EDC; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    border-radius: 5px; /* Ajusta el redondeo de los bordes si lo deseas */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+  
+nav ul li {
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+  
+nav ul li:first-child {
+    margin-left: auto; /* Alinea el primer enlace a la derecha */
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 125px;
+    background-color: white; /* Ajusta el color de fondo según tu diseño */
+    border: 1px solid #cfcfcf; /* Añade un borde para mejorar la apariencia */
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(26, 62, 220, 0.5);
+  }
+  
+  .menu-vertical li{
+    padding: 10px;
+  }
+    
+  li:hover .menu-vertical {
+    display: block;
+  }
+  
+  .menu-vertical li:hover{
+    background-color: #1A3EDC;
+    border-radius: 10px;
+  }
+  
+  .menu-vertical li:hover a {
+    color: white;
+  }
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+    float: left; /* Añade esta línea para alinear el logo a la izquierda */
+}
+  
+#logo img {
+    width: 120px; /* Ajusta el ancho de la imagen según tus necesidades */
+}
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 28vh;
+    background: #1A3EDC;
+    z-index: -1;
+    transform: skewY(16deg);
+    transform-origin: top right;
+    box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorT{
+    text-align: center;
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 30px;
+    margin-bottom: -20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+h1{ 
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.h2derecha{
+    float: right;
+    color: #ffffff;
+    font-size: 25px;
+    margin-right: 1px;
+    margin-top: -85px;
+}
+
+h2{
+    font-family:  'Chakra Petch', sans-serif;
+    font-size: 35px;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedorP {
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 27px;
+    margin-top: -60px;
+    margin-bottom: -10px;
+}
+
+.contenedorP p {
+    text-align: center;
+}
+
+.contenedorPunico{
+    width: 80%;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 27px;
+    text-align: center;
+    width: 80%; /* Cambiado el ancho al 80% */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.contenedorPunico p {
+    text-align: justify;
+}
+
+/* Define la animación */
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Inicialmente, la opacidad es 0, por lo que no es visible */
+        transform: translateX(-100%); /* Comienza fuera del lado izquierdo */
+    }
+    100% {
+        opacity: 1; /* A 100%, la opacidad es 1, lo que significa que está completamente visible */
+        transform: translateX(0); /* Sin desplazamiento horizontal */
+    }
+}
+
+/* Aplica la animación a los mosaicos y establece la opacidad inicial en 0 */
+.mosaic .provider-card {
+    animation: slideIn 0.5s ease-in-out forwards; /* Duración y efecto de la animación */
+    animation-delay: 0.5s; /* Establece un retraso uniforme para todos los mosaicos */
+    opacity: 0; /* Establece la opacidad inicial en 0 */
+}
+
+/* Retrasa la animación de cada mosaico */
+.mosaic .provider-card:nth-child(1) {
+    animation-delay: 0s; /* Sin retraso para el primer mosaico */
+}
+
+.mosaic .provider-card:nth-child(2) {
+    animation-delay: 0.5s; /* Sin retraso para el primer mosaico */
+}
+
+.mosaic .provider-card:nth-child(3) {
+    animation-delay: 1s; /* Sin retraso para el primer mosaico */
+}
+
+.mosaic .provider-card:nth-child(4) {
+    animation-delay: 1.5s; /* Sin retraso para el primer mosaico */
+}
+
+.mosaic .provider-card:nth-child(5) {
+    animation-delay: 2s; /* Sin retraso para el primer mosaico */
+}
+
+.mosaic .provider-card:nth-child(6) {
+    animation-delay: 2.5s; /* Sin retraso para el primer mosaico */
+}
+
+.mosaic .provider-card:nth-child(7) {
+    animation-delay: 3s; /* Sin retraso para el primer mosaico */
+}
+
+.mosaic .provider-card:nth-child(8) {
+    animation-delay: 3.5s; /* Sin retraso para el primer mosaico */
+}
+
+
+.mosaic {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas */
+}
+
+.provider-card {
+    background-color: #e7e7e757;
+    border: 1px solid #ffffff3d;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.provider-card img {
+    font-size: 20px;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px; /* Espaciado entre los iconos */
+}
+
+.social-icons i {
+    color: #61636c; /* Color del icono */
+    font-size: 30px; /* Tamaño del icono, ajusta según tus necesidades */
+}
+
+.provider-card a.sitio-web {
+    display: block;
+    background-color: #1A3EDC;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin-top: 15px;
+}
+
+.provider-card a:hover {
+    color: #84a8ce;
+}
+
+.provider-card h2 {
+    margin: 0;
+}
+
+.mosaic .provider-card:nth-child(2) img, /* Proveedor 2: VIPA - Selector para el h2 */
+.mosaic .provider-card:nth-child(3) img { /* Proveedor 3: SIEMENS - Selector para el h2 */
+    /* Estilos para el h2 de los proveedores VIPA, Siemens  */
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+.mosaic .provider-card:nth-child(4) img {
+    margin-top: 20px;
+}
+
+.mosaic .provider-card:nth-child(2) h2, /* Proveedor 2: VIPA - Selector para el h2 */
+.mosaic .provider-card:nth-child(3) h2{ /* Proveedor 3: SIEMENS - Selector para el h2 */
+    /* Estilos para el h2 de los proveedores VIPA, Siemens  */
+    margin-top: 18px;
+}
+
+.mosaic .provider-card:nth-child(4) h2{
+    margin-top: 10px;
+}
+
+.mosaic .provider-card:nth-child(1) .fa-globe{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #FF000F;
+}
+
+.mosaic .provider-card:nth-child(2) .fa-globe{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #005BA9;
+}
+
+.mosaic .provider-card:nth-child(3) .fa-globe{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #009999;
+}
+
+.mosaic .provider-card:nth-child(4) .fa-globe{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #0056B9;
+}
+
+.mosaic .provider-card:nth-child(5) .fa-globe{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #084DA5;
+}
+
+.mosaic .provider-card:nth-child(6) .fa-globe{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #535486;
+}
+
+.mosaic .provider-card:nth-child(7) .fa-globe{
+    margin-top: 50px;
+    font-size: 20px;
+    color: #166FC0;
+}
+
+.mosaic .provider-card:nth-child(8) .fa-globe{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #BF2F38;
+}
+
+
+.separator {
+    margin-top: 20px;
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #000000;
+    margin: 10px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+.separator2{
+    align-content: center;
+    width: 90%;
+    height: 1.5px;
+    background-color: #1A3EDC;
+    margin: 10px auto; /* Ajusta el espacio entre las líneas y los íconos */
+}
+
+/* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: -10px;
+  }
+  
+  footer a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1.5px; /* Ancho de la línea */
+    height: 20px; /* Altura de la línea */
+    background-color: #1A3EDC; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el icono y la línea */
+  }
+  
+  footer a {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre los iconos */
+    color: #0f0f0f;
+    font-size: 25px; /* Tamaño de fuente de los iconos */
+    position: relative;
+  }
+  
+  /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
+  footer a:hover {
+    opacity: 0.7;
+  }
+
+
+/*RESPONSIVE*/
+
+  /* Estilo para el botón de menú hamburguesa */
+.menu-icon {
+    display: none; /* Oculta el botón en tamaños de pantalla más grandes */
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #1A3EDC;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Estilo para mostrar la navegación en dispositivos móviles */
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 10px;
+  }
+
+  /* Media query para mostrar el botón de menú hamburguesa y ocultar la navegación */
+@media (max-width: 768px) {
+    .header{
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu-icon {
+        display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+    }
+  
+    #logo img {
+      width: 115px; /* Ajusta el ancho de la imagen según tus necesidades */
+    }
+  
+    nav {
+        display: none; /* Oculta la navegación en tamaños de pantalla más pequeños */
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav.show {
+        display: flex; /* Muestra la navegación cuando se activa */
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+  
+    nav li {
+        margin: 10px 0;
+    }
+  
+    /* Estilo para el enlace activo en dispositivos móviles */
+    nav a.current::before {
+        top: 0;
+    }
+
+    .skewed {
+        width: 100%;
+        height: 20vh;
+      }
+
+      h1{ 
+        margin-top: 35px;
+        font-size: 25px;
+    } 
+
+    h2{
+        font-size: 26px;
+    }
+
+    .contenedorPunico{
+        font-size: 17px;
+    }
+
+    .contenedorPunico p {
+        text-align: center;
+    }
+
+    .contenedorP{
+        font-size: 17px;
+        margin-top: -50px;
+    }
+
+    .contenedorP p{
+        text-align: center;        
+    }
+
+    /* Estilos CSS personalizados para el contenedor de Swiper */
+    .swiper {
+    height: 45vh; /* Ajusta la altura del slider según tus necesidades */
+    width: 100vh;
+    }
+
+    .swiper-pagination{
+        display: none;
+    }
+
+    .logo{
+        width: 40%; /* Ajusta el tamaño de los logos según tus necesidades */
+    }
+
+    .logos-container{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+
+  @media (max-width: 280px)  {
+    #logo {
+      display: flex;
+      align-items: center;
+      margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+      float: left; /* Añade esta línea para alinear el logo a la izquierda */
+    }
+    
+    #logo img {
+      width: 70px; /* Ajusta el ancho de la imagen según tus necesidades */
+    }
+
+    .menu-icon .bar {
+      margin-top: 50px;
+      width: 25px;
+      height: 2px;
+      background-color: #1A3EDC;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    .h2derecha{
+        font-size: 10px;
+    }
+
+    h1{ 
+        margin-top: 40px;
+        font-size: 20px;
+    } 
+
+    h2{
+        font-size: 21px;
+    }
+
+    .contenedorPunico{
+        font-size: 12px;
+    }
+
+    .contenedorPunico p {
+        text-align: center;
+    }
+
+    .contenedorP{
+        font-size: 12px;
+        margin-top: -50px;
+    }
+
+    .contenedorP p{
+        text-align: center;        
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+    .mosaic {
+        grid-template-columns: repeat(1, 1fr); /* Una columna por fila en dispositivos móviles */
+        grid-template-rows: repeat(8, 1fr); /* 8 filas en total */
+    }
+
+    .provider-card img {
+        max-width: 100%; /* Hace que las imágenes se ajusten al ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}

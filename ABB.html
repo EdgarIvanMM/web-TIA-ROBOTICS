@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/faviconB.ico">
+    <link rel="stylesheet" href="estilos/estilo_productos.css">
+    <script src="https://kit.fontawesome.com/374b632105.js" crossorigin="anonymous"></script>
+
+    <!-- Estilo individual-->
+    <style>
+        .container-items {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .container-items0{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container-items1{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container-items2{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .item img{
+            width: 100%;
+            height: 20vh;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            transition: all .5s;
+        }
+
+        .section-divider {
+            border-bottom: 3px solid #ccc;
+            margin-bottom: 20px;
+            width: 40%;
+            margin-left: 0; 
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para mostrar el contenido de la pestaña activa */
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px){
+            .productos-containe {
+                margin-top: 350px;
+            }
+
+            .container-items0 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container-items1{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .container-items2{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .container-items{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .item img{
+                width: 100%;
+                height: 10vh;
+            }
+
+            .price{
+                font-size: 13px;
+            }
+        }   
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="imagenes/logo_tia.png" alt="Logo">
+            </a>
+        </div>
+
+         <!-- Agrega el botón de menú hamburguesa -->
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+            
+        <nav>
+            <ul>
+             <li><a href="index.html" class="enlace">INICIO</a></li>
+             <li><a href="ACERCA DE.html" class="enlace">ACERCA DE</a></li>
+             <li><a href="EXPERIENCIA.html" class="enlace">EXPERIENCIA</a></li>
+             <li><a href="EVENTOS.html" class="enlace">EVENTOS</a></li>
+             <li><a href="PROVEEDORES.html" class="enlace">PROVEEDORES</a></li>
+             <li>
+                 <a class="enlace current">PRODUCTOS</a>
+                 <ul class="menu-vertical">
+                   <li><a href="ABB.html"></a></li>
+                   <li><a href="ABB.html" class="enlace current">ABB</a></li>
+                   <li><a href="AB.html">Allen Bradley</a></li>
+                   <li><a href="VIPA.html">Vipa</a></li>
+                   <li><a href="YASKAWA.html">SIEMENS</a></li>
+                   <li><a href="INVERTEK.html">INVERTEK</a></li>
+                   <li><a href="OFERTAS.html">Ofertas</a></li>
+                 </ul>
+             </li>
+             <li><a href="CONTACTO.html" class="enlace">CONTACTO</a></li>
+           </ul>
+         </nav>
+    </header>
+
+    <main>
+        <!--Seccion de diseño triangulo azul-->
+        
+        <!--Seccion de imagen de portada-->
+        <section>
+            <img src="imagenes/portadaABBPRO.png" alt="img" class="portada-image">
+        </section>
+        <!-- Sección de pestañas -->
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tab1" checked>
+            <label for="tab1" class="tab-label">Robots Pequeños</label>
+
+            <input type="radio" name="tabs" id="tab2">
+            <label for="tab2" class="tab-label">Robots Grandes</label>
+
+            <!-- Agrega más pestañas según sea necesario -->
+
+            <!-- Contenido de las pestañas -->
+            <div id="content1" class="tab-content">
+                <!-- Contenido de la pestaña de robots pequeños -->
+                <div class="container-items0">
+                    <!-- Contenido de los productos de robots pequeños -->
+                    <!-- Agrega aquí los productos de robots pequeños -->
+                </div>
+            </div>
+
+            <div id="content2" class="tab-content">
+                <!-- Contenido de la pestaña de robots grandes -->
+                <div class="container-items0">
+                    <!-- Contenido de los productos de robots grandes -->
+                    <!-- Agrega aquí los productos de robots grandes -->
+                </div>
+            </div>
+        
+        <!--Seccion de primer titulo H1 y titulo de ventana-->
+        <section class="contenedorT">
+            <h1 class="tespecial">ROBOTS ABB</h1>
+            <h3>ROBOTS ARTICULADOS</h3>
+        </section>
+
+        <section>
+        <h4>ROBOTS PEQUEÑOS</h4>
+        <hr class="section-divider">
+        </section>
+
+        <section>
+        <div class="container-items0">
+            
+            <!--Primer producto-->
+            <div class="item">
+                <figure>
+                    <img class="product-image" src="https://www07.abb.com/images/librariesprovider89/default-album/irb1010.jpg?sfvrsn=a881c50a_1" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1010</h2>
+                    <p class="price"> Carga util: 1.5 kg </p>
+                    <p class="price"> Alcance: 0.37 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+             <!--Segundo producto-->
+             <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-1090-education-robot.jpg?sfvrsn=e89c190b_1&CropWidth=780&CropHeight=390&Quality=High&CropX=0&CropY=0&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=0bca3e68b8481cbd10c0693f6466a963" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1090</h2>
+                    <p class="price"> Carga util: 3.5 kg</p>
+                    <p class="price"> Alcance: 0.58 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--Tercer producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-1100-(390x195).jpg?sfvrsn=4c0c0709_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1100</h2>
+                    <p class="price">Carga util: 4 kg</p>
+                    <p class="price"> Alcance: 0.58, 0.475 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--Cuarto producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-1200-(390x195).jpg?sfvrsn=910c0709_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1200</h2>
+                    <p class="price">Carga util: 5-7 kg</p>
+                    <p class="price"> Alcance: 0.7, 0.9 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--Quinto producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-1300-(390x195).jpg?sfvrsn=f30c0709_1&CropWidth=192&CropHeight=96&Quality=High&CropX=0&CropY=0&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=7938976591c51659e75dee319ea7a047" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1300</h2>
+                    <p class="price">Carga util: 7, 10, 11, 12 kg</p>
+                    <p class="price"> Alcance: 0.9, 1.15, 1.4 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>ROBOTS MEDIANOS</h4> 
+            <hr class="section-divider">
+        </section>
+        
+        <section>
+            <div class="container-items1">
+
+            <!--Quinto producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb1520id_390x195.jpg?sfvrsn=760b0109_1&CropWidth=390&CropHeight=195&Quality=High&CropX=0&CropY=0&Width=390&Height=195&Method=CropToFixedAreaCropToFixedAreaArguments&Key=a7424289a53c29d9b71def9955c549d2" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1520ID</h2>
+                    <p class="price">Carga util: 4 kg</p>
+                    <p class="price"> Alcance: 1.50 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+             <!--Sexto producto-->
+             <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-1600-(390x195).jpg?sfvrsn=1c0e0709_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1600</h2>
+                    <p class="price">Carga util: 6 - 10 kg</p>
+                    <p class="price"> Alcance: 1.2, 1.45 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--Septimo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-1660id-(390x195).jpg?sfvrsn=7f0e0709_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 1660ID</h2>
+                    <p class="price">Carga util: 6 kg</p>
+                    <p class="price"> Alcance: 1.55 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--Octavo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/9iba247038_400x400-copy.jpg?sfvrsn=c5803709_1" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 2400</h2>
+                    <p class="price">Carga util: 10 - 16 kg</p>
+                    <p class="price"> Alcance: 1.55 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--Noveno producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-2600.jpg?sfvrsn=cea03509_1" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 2600</h2>
+                    <p class="price">Carga util: 12, 20 kg</p>
+                    <p class="price"> Alcance: 1.65, 1.85 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--Decimo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-2600id.jpg?sfvrsn=eb853509_1" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 2600ID</h2>
+                    <p class="price">Carga util: 8, 15 kg</p>
+                    <p class="price"> Alcance: 1.85, 2.0 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--11vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-4400.jpg?sfvrsn=390f3b09_1" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 4400</h2>
+                    <p class="price">Carga util: 60 kg</p>
+                    <p class="price"> Alcance: 1.95m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--12vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/9iba242817_720x540-copy.jpg?sfvrsn=13823a09_1" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 460</h2>
+                    <p class="price">Carga util: 110 kg</p>
+                    <p class="price"> Alcance: 2.40m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--13vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-4600.jpg?sfvrsn=c9763a09_1" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 4600</h2>
+                    <p class="price">Carga util: 20 - 60 kg</p>
+                    <p class="price"> Alcance: 2.05, 2.51, 2.55m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>ROBOTS GRANDES</h4>
+            <hr class="section-divider">
+        </section>
+
+        <section>
+            <div class="container-items2">
+
+            <!--14vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb5710-gray-bg.jpg?sfvrsn=4d9bc709_1&CropWidth=780&CropHeight=390&Quality=High&CropX=0&CropY=0&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=0bca3e68b8481cbd10c0693f6466a963" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 5710</h2>
+                    <p class="price">Carga util: 70 - 110 kg</p>
+                    <p class="price"> Alcance: 2.3, 2.7 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--15vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb5720-gray.jpg?sfvrsn=909bc709_1&CropWidth=780&CropHeight=390&Quality=High&CropX=0&CropY=0&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=0bca3e68b8481cbd10c0693f6466a963" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 5720</h2>
+                    <p class="price">Carga util: 90 - 180 kg</p>
+                    <p class="price"> Alcance:  2.6, 3.0 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--16vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-660-(390x195).jpg?sfvrsn=c4ef0609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 660</h2>
+                    <p class="price">Carga util: 180 - 250 kg</p>
+                    <p class="price"> Alcance:  3.15 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--17vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-6620-(390x195).jpg?sfvrsn=27e80609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 660</h2>
+                    <p class="price">Carga util: 150 kg</p>
+                    <p class="price"> Alcance:  2.2  m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--18vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-6650s-(390x195).jpg?sfvrsn=deb0609_1&CropWidth=370&CropHeight=185&Quality=High&CropX=0&CropY=0&Width=370&Height=185&Method=CropToFixedAreaCropToFixedAreaArguments&Key=4544919dff806c77c1f5dd2f939579b5" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6650S</h2>
+                    <p class="price">Carga util: 125-200 kg</p>
+                    <p class="price"> Alcance:  3.0m, 3.5 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+             <!--19vo producto-->
+             <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-6660-(390x195).jpg?sfvrsn=45eb0609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6660</h2>
+                    <p class="price">Carga util: 100 - 205 kg</p>
+                    <p class="price"> Alcance:  1.93 - 3.35 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--20vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-6700-(390x195).jpg?sfvrsn=a5eb0609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6700</h2>
+                    <p class="price">Carga util: 150-300 kg</p>
+                    <p class="price"> Alcance:  2.60-3.20 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+             <!--21vo producto-->
+             <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb67102fc641f3c1f463c09537ff0000433538.jpg?sfvrsn=1132220b_1&CropWidth=758&CropHeight=379&Quality=High&CropX=18&CropY=9&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=612f6a8dc5393cf0c609d0393f7ba956" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6710</h2>
+                    <p class="price">Carga util:  175-210 kg</p>
+                    <p class="price"> Alcance:  2.65-2.95 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+             <!--21vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb6720.jpg?sfvrsn=323e220b_1&CropWidth=748&CropHeight=374&Quality=High&CropX=18&CropY=6&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=96cedca53cea49b0a6dd801a12d26a69" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6720</h2>
+                    <p class="price">Carga util:  150-240 kg</p>
+                    <p class="price"> Alcance:  2.50-3.10 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--22vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb6730.jpg?sfvrsn=4b3e220b_1&CropWidth=758&CropHeight=379&Quality=High&CropX=15&CropY=4&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=1fc9acaea4694b3870d3660d3dc65c06" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6730</h2>
+                    <p class="price">Carga util: 190-270 kg</p>
+                    <p class="price"> Alcance:  2.70-3.10 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--23vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb6740.jpg?sfvrsn=d83e220b_1&CropWidth=732&CropHeight=366&Quality=High&CropX=19&CropY=11&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=f9ea514848c4d8ab04092d5f5ef7cdfe" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6740</h2>
+                    <p class="price">Carga util: 220-310 kg</p>
+                    <p class="price"> Alcance:  2.80-3.20 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--24vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-6790-(390x195).jpg?sfvrsn=87eb0609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 6790</h2>
+                    <p class="price">Carga util: 205, 235 kg</p>
+                    <p class="price"> Alcance:  2.65, 2.80 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--24vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-760-(390x195).jpg?sfvrsn=70d40609_1&CropWidth=342&CropHeight=171&Quality=High&CropX=0&CropY=0&Width=342&Height=171&Method=CropToFixedAreaCropToFixedAreaArguments&Key=e6bf9971d06ab5532205dd3c26d5eb1e" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 760</h2>
+                    <p class="price">Carga util: 450 kg</p>
+                    <p class="price"> Alcance:  3.18 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--25vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-760-(390x195).jpg?sfvrsn=70d40609_1&CropWidth=342&CropHeight=171&Quality=High&CropX=0&CropY=0&Width=342&Height=171&Method=CropToFixedAreaCropToFixedAreaArguments&Key=e6bf9971d06ab5532205dd3c26d5eb1e" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 7600</h2>
+                    <p class="price">Carga util: 150-500 kg</p>
+                    <p class="price"> Alcance:  3.5, 2.8, 2.55, 2.3 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--26vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-7710.jpg?Culture=en&sfvrsn=9e27400c_1&CropWidth=780&CropHeight=390&Quality=High&CropX=0&CropY=0&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=0bca3e68b8481cbd10c0693f6466a963" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 7710</h2>
+                    <p class="price">Carga util: 280-500kg</p>
+                    <p class="price"> Alcance:  2.85, 3.5 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--27vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-7720.jpg?Culture=en&sfvrsn=5020400c_1&CropWidth=780&CropHeight=390&Quality=High&CropX=0&CropY=0&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=0bca3e68b8481cbd10c0693f6466a963" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 7720</h2>
+                    <p class="price">Carga util: 400-620 kg</p>
+                    <p class="price"> Alcance:   2.9, 3.5 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--28vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-8700-(390x195).jpg?sfvrsn=98d40609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 8700</h2>
+                    <p class="price">Carga util: 550-800 kg</p>
+                    <p class="price"> Alcance:   3.5, 4.2 m</p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>PALETIZADO</h4>
+            <hr class="section-divider">
+        </section>
+
+        <section>
+            <div class="container-items">
+
+            <!--29vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-460-(390x195).jpg?sfvrsn=a7ef0609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 460</h2>
+                    <p class="price">Carga util: 110 kg</p>
+                    <p class="price"> Alcance: 2.40 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+            <!--30vo producto-->
+            <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-660-(390x195).jpg?sfvrsn=c4ef0609_1&CropWidth=292&CropHeight=146&Quality=High&CropX=0&CropY=0&Width=292&Height=146&Method=CropToFixedAreaCropToFixedAreaArguments&Key=95cd1e3cafa590beaef40471cf162259" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 660</h2>
+                    <p class="price">Carga util: 180 - 250 kg</p>
+                    <p class="price"> Alcance: 3.15 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+
+             <!--30vo producto-->
+             <div class="item">
+                <figure>
+                    <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-760-(390x195).jpg?sfvrsn=70d40609_1&CropWidth=342&CropHeight=171&Quality=High&CropX=0&CropY=0&Width=342&Height=171&Method=CropToFixedAreaCropToFixedAreaArguments&Key=e6bf9971d06ab5532205dd3c26d5eb1e" alt="producto">
+                </figure>
+                <div class="info-product">
+                    <h2>IRB 760</h2>
+                    <p class="price">Carga util: 450 kg</p>
+                    <p class="price"> Alcance: 3.18 m </p>
+                    <button>Contactar</button>
+                </div>
+            </div>
+        </section>
+
+    <div class="productos-containe">
+        <p>PREGUNTA POR MAS PRODUCTOS</p>
+            <div class="center-button-container">
+            <button class="botonL"><i class="fa-brands fa-whatsapp"></i> Contactar WhatsApp</button>
+            </div>
+    </div>
+
+      
+    <div class="separator"></div> <!-- Primera línea horizontal -->
+
+    <footer>
+        <a href="https://www.facebook.com/TIAutomation" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/tia_robotics?igsh=MTJoOGt2azl2YjRzNg==" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@tiarobotics?_t=8gaytUXJDQD&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.linkedin.com/company/tiasa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </footer>
+
+    <div class="separator2"></div> <!-- Segunda línea horizontal -->
+
+<!-- Ventana emergente oculta inicialmente -->
+<div id="ventanaEmergente" class="ventana">
+    <div class="contenido">
+        <h2>Horario de Atención</h2>
+        <p>Lunes a Viernes: 8:30 AM - 6:00 PM</p>
+        <p>Sábados y Domingos: Cerrado</p>
+        <p>TELEFONO: 81 1176 6261</p>
+
+        <a href="https://www.mercadolibre.com.mx/perfil/MUNOZISAIAS20230921160055" target="_blank" class="boton-contacto btn-mercadolibre">
+            <button> <i class="fa-solid fa-store"></i> Mercado Libre</button>
+        </a>
+
+        <a href="https://wa.me/8111766261" target="_blank" class="boton-contacto">
+            <button id="llamar"><i class="fa-brands fa-whatsapp"></i> Contactar WhatsApp</button>
+        </a>
+        
+        <a href="CONTACTO.html" class="boton-contacto">
+            <button><i class="fa-regular fa-envelope"></i> Enviar Correo</button>
+        </a>
+    </div>
+    <i id="cerrarVentana" class="fa-solid fa-times"></i>
+</div>
+
+</main>
+
+<script src="scripts/productos.js"></script>
+
+<script>
+    window.addEventListener('mouseover', initLandbot, { once: true });
+    window.addEventListener('touchstart', initLandbot, { once: true });
+    var myLandbot;
+    function initLandbot() {
+      if (!myLandbot) {
+        var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+        s.addEventListener('load', function() {
+          myLandbot = new Landbot.Popup({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2067536-K5GR2ESGXUS65PPF/index.json',
+          });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/faviconB.ico">
+    <link rel="stylesheet" href="estilos/estilo_productos.css">
+    <script src="https://kit.fontawesome.com/374b632105.js" crossorigin="anonymous"></script>
+
+    <!-- Estilo individual -->
+    <style>
+        .container-items {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .container-items0, .container-items1, .container-items2 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .item img {
+            width: 100%;
+            height: 20vh;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            transition: all .5s;
+        }
+
+        .section-divider {
+            border-bottom: 3px solid #ccc;
+            margin-bottom: 20px;
+            width: 40%;
+            margin-left: 0; 
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para las pestañas */
+        .tabs {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .tab-label {
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+    
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
+        }
+
+        /* Estilos para mostrar el contenido de la pestaña activa */
+        #tab1:checked ~ .tab-content#content1,
+        #tab2:checked ~ .tab-content#content2 {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .productos-containe {
+                margin-top: 350px;
+            }
+
+            .container-items0, .container-items1, .container-items2, .container-items {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .item img {
+                width: 100%;
+                height: 10vh;
+            }
+
+            .price {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="imagenes/logo_tia.png" alt="Logo">
+            </a>
+        </div>
+
+        <!-- Agrega el botón de menú hamburguesa -->
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" class="enlace">INICIO</a></li>
+                <li><a href="ACERCA DE.html" class="enlace">ACERCA DE</a></li>
+                <li><a href="EXPERIENCIA.html" class="enlace">EXPERIENCIA</a></li>
+                <li><a href="EVENTOS.html" class="enlace">EVENTOS</a></li>
+                <li><a href="PROVEEDORES.html" class="enlace">PROVEEDORES</a></li>
+                <li>
+                    <a class="enlace current">PRODUCTOS</a>
+                    <ul class="menu-vertical">
+                        <li><a href="ABB.html" class="enlace current">ABB</a></li>
+                        <li><a href="AB.html">Allen Bradley</a></li>
+                        <li><a href="VIPA.html">Vipa</a></li>
+                        <li><a href="YASKAWA.html">SIEMENS</a></li>
+                        <li><a href="INVERTEK.html">INVERTEK</a></li>
+                        <li><a href="OFERTAS.html">Ofertas</a></li>
+                    </ul>
+                </li>
+                <li><a href="CONTACTO.html" class="enlace">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Seccion de diseño triangulo azul-->
+        
+        <!--Seccion de imagen de portada-->
+        <section>
+            <img src="imagenes/portadaABBPRO.png" alt="img" class="portada-image">
+        </section>
+
+        <!-- Sección de pestañas -->
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tab1" checked>
+            <label for="tab1" class="tab-label">Robots Pequeños</label>
+
+            <input type="radio" name="tabs" id="tab2">
+            <label for="tab2" class="tab-label">Robots Grandes</label>
+        </div>
+
+        <!-- Contenido de las pestañas -->
+        <div id="content1" class="tab-content">
+            <div class="container-items0">
+                <!--Primer producto-->
+                <div class="item">
+                    <figure>
+                        <img class="product-image" src="https://www07.abb.com/images/librariesprovider89/default-album/irb1010.jpg?sfvrsn=a881c50a_1" alt="producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>IRB 1010</h2>
+                        <p class="price"> Carga util: 1.5 kg </p>
+                        <p class="price"> Alcance: 0.37 m </p>
+                        <button>Contactar</button>
+                    </div>
+                </div>
+
+                <!--Segundo producto-->
+                <div class="item">
+                    <figure>
+                        <img src="https://www07.abb.com/images/librariesprovider89/default-album/irb-1090-education-robot.jpg?sfvrsn=e89c190b_1&CropWidth=780&CropHeight=390&Quality=High&CropX=0&CropY=0&Width=192&Height=96&Method=CropToFixedAreaCropToFixedAreaArguments&Key=0bca3e68b8481cbd10c0693f6466a963" alt="producto">
+                    </figure>
+                    <div class="info-product">
+                        <h2>IRB 1090</h2>
+                        <p class="price"> Carga util: 3.5 kg</p>
+                        <p class="price"> Alcance: 0.58 m</p>
+                        <button>Contactar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content2" class="tab-content">
+            <!-- Contenido de la pestaña de robots grandes -->
+            <div class="container-items0">
+                <!-- Contenido de los productos de robots grandes -->
+                <!-- Agrega aquí los productos de robots grandes -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

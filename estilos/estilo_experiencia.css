@@ -32,7 +32,6 @@ header a.current::before {
   left: 0;
 }
 
-
 header a {
     text-decoration: none;
     color: #1A3EDC;
@@ -65,6 +64,34 @@ nav ul li {
   
 nav ul li:first-child {
     margin-left: auto; /* Alinea el primer enlace a la derecha */
+  }
+
+  .menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 125px;
+    background-color: white; /* Ajusta el color de fondo según tu diseño */
+    border: 1px solid #cfcfcf; /* Añade un borde para mejorar la apariencia */
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(26, 62, 220, 0.5);
+  }
+  
+  .menu-vertical li{
+    padding: 10px;
+  }
+    
+  li:hover .menu-vertical {
+    display: block;
+  }
+  
+  .menu-vertical li:hover{
+    background-color: #1A3EDC;
+    border-radius: 10px;
+  }
+  
+  .menu-vertical li:hover a {
+    color: white;
   }
 
 #logo {
@@ -127,7 +154,7 @@ nav ul li:first-child {
 }
 
   .contenedorP p {
-    text-align: justify;
+    /*text-align: justify;*/
     color: #000000;
 }
 
@@ -155,12 +182,22 @@ nav ul li:first-child {
 .logo-wrapper {
   display: inline-block; /* Alinea los logos en una línea horizontal */
   margin-right: 20px; /* Espacio entre logos */
-  animation: scroll 20s linear infinite; /* Animación de desplazamiento */
+  animation: scroll 30s linear infinite; /* Animación de desplazamiento */
 }
 
 .logo-carousel img{
   width: 30vh;
   height: 30vh;
+}
+
+/* Animación de desplazamiento desde la izquierda para la primera sección */
+.logo-carousel1 .logo-wrapper {
+  animation: scroll 30s linear infinite reverse; /* Sentido contrario */
+}
+
+/* Animación de desplazamiento desde la derecha para la segunda sección */
+.logo-carousel2 .logo-wrapper {
+  animation: scroll 30s linear infinite; /* La dirección es la misma que por defecto */
 }
 
 @keyframes scroll {
@@ -429,53 +466,54 @@ nav li {
   }
 
   .skewed {
-    height: 24vh;
+    height: 20vh;
     transform: skewY(-27deg);
   }
 
   .h2izquierda {
     font-size: 15px;
     margin-top: -120px;
-}
+  }
 
-h1{
-  margin-left: 40px;
-  font-size: 32px;
-}
+  h1{
+    margin-left: 40px;
+    font-size: 32px;
+  }
 
-.contenedorP {
-  font-size: 17px;
-  /*margin-top: -20px;*/
-}
+  .contenedorP {
+    font-size: 17px;
+    /*margin-top: -20px;*/
+    /*060524*/ text-align: center;
+  }
 
 
-.contenedorPH2{
-  font-size: 27px;
-}
+  .contenedorPH2{
+    font-size: 27px;
+  }
 
-/*Estilos del carrousel de logos*/
-.logo-carousel img{
-  width: 20vh;
-  height: 20vh;
-}
+  /*Estilos del carrousel de logos*/
+  .logo-carousel img{
+    width: 20vh;
+    height: 20vh;
+  }
 
-/*Parte de Logros Destacados*/
-.logoLD {
-  height: auto;
-  margin: -1vh;
-  width: 13vh; /* Asegura que la imagen no se desborde */
-}
+  /*Parte de Logros Destacados*/
+  .logoLD {
+    height: auto;
+    margin: -1vh;
+    width: 10vh; /* Asegura que la imagen no se desborde */
+  }
 
-.larger-image {
-  margin: -2vh;
-  margin-top: -1vh;
-  width: 13vh; /* Establece el ancho al 100% para que se ajuste */
-}
+  .larger-image {
+    margin: -2vh;
+    margin-top: -1vh;
+    width: 13vh; /* Establece el ancho al 100% para que se ajuste */
+  }
 
-.divider {
-  height: 10vh;
-  border-right: 2px solid rgb(169, 168, 168); /* Color y estilo de la línea */
-  margin: 0 3vh;
-}
+  .divider {
+    height: 8vh;
+    border-right: 2px solid rgb(169, 168, 168); /* Color y estilo de la línea */
+    margin: 0 3vh;
+  }
 
 }

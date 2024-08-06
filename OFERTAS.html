@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/faviconB.ico">
+    <link rel="stylesheet" href="estilos/estilo_productos.css">
+    <script src="https://kit.fontawesome.com/374b632105.js" crossorigin="anonymous"></script>
+
+    <style>
+        @media screen and (max-width: 768px) {
+            .contenedorT{
+                margin-top: -1050px;
+            }
+
+            .itemf figure img {
+                height: 15vh;
+            }
+
+            .offer{
+                height: 5vh;
+            }
+
+            .text-info h2 {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="imagenes/logo_tia.png" alt="Logo">
+            </a>
+        </div>
+
+         <!-- Agrega el botón de menú hamburguesa -->
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+            
+        <nav>
+            <ul>
+             <li><a href="index.html" class="enlace">INICIO</a></li>
+             <li><a href="ACERCA DE.html" class="enlace">ACERCA DE</a></li>
+             <li><a href="EXPERIENCIA.html" class="enlace">EXPERIENCIA</a></li>
+             <li><a href="EVENTOS.html" class="enlace">EVENTOS</a></li>
+             <li><a href="PROVEEDORES.html" class="enlace">PROVEEDORES</a></li>
+             <li>
+                 <a class="enlace current">PRODUCTOS</a>
+                 <ul class="menu-vertical">
+                   <li><a href="ABB.html"></a></li>
+                   <li><a href="ABB.html">ABB</a></li>
+                   <li><a href="AB.html">Allen Bradley</a></li>
+                   <li><a href="VIPA.html">Vipa</a></li>
+                   <li><a href="YASKAWA.html">SIEMENS</a></li>
+                   <li><a href="INVERTEK.html">INVERTEK</a></li>
+                   <li><a href="OFERTAS.html" class="enlace current">Ofertas</a></li>
+                 </ul>
+             </li>
+             <li><a href="CONTACTO.html" class="enlace">CONTACTO</a></li>
+           </ul>
+         </nav>
+    </header>
+
+    <main>
+        <!--Noveno producto-->
+        <section class="contenedorT">
+            <h1 class="tofer">OFERTAS</h1>
+        </section>
+
+        <!--Seccion ofertas-->
+        <section>
+        <div class="center-container">
+            <div class="container-ofertas">
+                <!--Primer oferta-->
+                <div class="itemf">
+                    <figure>
+                        <img src="https://cdn11.bigcommerce.com/s-roooul/images/stencil/1280x1280/products/1907/2216/VIPA_312-5BE23_3D__71994.1604583644.png?c=2" alt="producto">
+                    </figure>
+                    <div class="info-oferta">
+                        <div class="text-info">
+                        <h2 class="h2">PROXIMAMENTE</h2>
+                        <p class="priceO"></p>
+                        <p class="priceOferta"></p>
+                        <button>Contactar</button>
+                        </div>
+                        <p class="offer">-%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-container">
+            <div class="container-ofertas">
+                <!--Primer oferta-->
+                <div class="itemf">
+                    <figure>
+                        <img src="https://cdn11.bigcommerce.com/s-roooul/images/stencil/1280x1280/products/1907/2216/VIPA_312-5BE23_3D__71994.1604583644.png?c=2" alt="producto">
+                    </figure>
+                    <div class="info-oferta">
+                        <div class="text-info">
+                        <h2 class="h2">PROXIMAMENTE</h2>
+                        <p class="priceO"></p>
+                        <p class="priceOferta"></p>
+                        <button>Contactar</button>
+                        </div>
+                        <p class="offer">-%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+        <div class="center-button-container">
+            <button class="botonL"><i class="fa-brands fa-whatsapp"></i> Contactar WhatsApp</button>
+        </div>
+      
+    <div class="separator"></div> <!-- Primera línea horizontal -->
+
+    <footer>
+        <a href="https://www.facebook.com/TIAutomation" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/tia_robotics?igsh=MTJoOGt2azl2YjRzNg==" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@tiarobotics?_t=8gaytUXJDQD&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.linkedin.com/company/tiasa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </footer>
+
+    <div class="separator2"></div> <!-- Segunda línea horizontal -->
+
+<!-- Ventana emergente oculta inicialmente -->
+<div id="ventanaEmergente" class="ventana">
+    <div class="contenido">
+        <h2>Horario de Atención</h2>
+        <p>Lunes a Viernes: 8:30 AM - 6:00 PM</p>
+        <p>Sábados y Domingos: Cerrado</p>
+        <p>TELEFONO: 81 1176 6261</p>
+
+        <a href="https://www.mercadolibre.com.mx/perfil/MUNOZISAIAS20230921160055" target="_blank" class="boton-contacto btn-mercadolibre">
+            <button> <i class="fa-solid fa-store"></i> Mercado Libre</button>
+        </a>
+
+        <a href="https://wa.me/8111766261" target="_blank" class="boton-contacto">
+            <button id="llamar"><i class="fa-brands fa-whatsapp"></i> Contactar WhatsApp</button>
+        </a>
+        
+        <a href="CONTACTO.html" class="boton-contacto">
+            <button><i class="fa-regular fa-envelope"></i> Enviar Correo</button>
+        </a>
+    </div>
+    <i id="cerrarVentana" class="fa-solid fa-times"></i>
+</div>
+
+</main>
+
+<script src="scripts/productos.js"></script>
+
+<script>
+    window.addEventListener('mouseover', initLandbot, { once: true });
+    window.addEventListener('touchstart', initLandbot, { once: true });
+    var myLandbot;
+    function initLandbot() {
+      if (!myLandbot) {
+        var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+        s.addEventListener('load', function() {
+          myLandbot = new Landbot.Popup({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2067536-K5GR2ESGXUS65PPF/index.json',
+          });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+    </script>
+
+</body>
+</html>

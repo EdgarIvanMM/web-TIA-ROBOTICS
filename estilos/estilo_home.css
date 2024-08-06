@@ -71,6 +71,34 @@ nav ul li:first-child {
   margin-left: auto; /* Alinea el primer enlace a la derecha */
 }
 
+.menu-vertical {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 125px;
+  background-color: white; /* Ajusta el color de fondo según tu diseño */
+  border: 1px solid #cfcfcf; /* Añade un borde para mejorar la apariencia */
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(26, 62, 220, 0.5);
+}
+
+.menu-vertical li{
+  padding: 10px;
+}
+  
+li:hover .menu-vertical {
+  display: block;
+}
+
+.menu-vertical li:hover{
+  background-color: #1A3EDC;
+  border-radius: 10px;
+}
+
+.menu-vertical li:hover a {
+  color: white;
+}
+
 #logo {
   display: flex;
   align-items: center;

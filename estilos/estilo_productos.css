@@ -66,6 +66,34 @@
         margin-left: auto; /* Alinea el primer enlace a la derecha */
     }
 
+    .menu-vertical {
+        position: absolute;
+        display: none;
+        list-style: none;
+        width: 125px;
+        background-color: white; /* Ajusta el color de fondo según tu diseño */
+        border: 1px solid #cfcfcf; /* Añade un borde para mejorar la apariencia */
+        border-radius: 10px;
+        box-shadow: 0 0 10px 2px rgba(26, 62, 220, 0.5);
+      }
+      
+      .menu-vertical li{
+        padding: 10px;
+      }
+        
+      li:hover .menu-vertical {
+        display: block;
+      }
+      
+      .menu-vertical li:hover{
+        background-color: #1A3EDC;
+        border-radius: 10px;
+      }
+      
+      .menu-vertical li:hover a {
+        color: white;
+      }
+
     #logo {
         display: flex;
         align-items: center;
@@ -158,6 +186,15 @@
         margin-bottom: 40px;
     }
 
+    .contenedorP{
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    .contenedorP p{
+        text-align: center;        
+    }
+
 /*Estilos de informacion productos*/
 
 /*Estilos globales*/
@@ -242,9 +279,9 @@
     .botonL{
         border: none;
         background: none;
-        background-color: #1A3EDC;
+        background-color: #25D366;
         color: #ffffff;
-        width: 60%;
+        width: 15%;
         height: 50px;
         cursor: pointer;
         border-radius: 10px;
@@ -272,7 +309,7 @@
     }
 
     .container-ofertas {
-        width: 70%;
+        width: 90%;
         margin-bottom: 20px;
         display: flex;
         justify-content: center; /* Centra los elementos horizontalmente */
@@ -289,7 +326,7 @@
     }
 
     .itemf img {
-        max-width: 150px; /* Ancho máximo para la imagen (ajústalo según tus necesidades) */
+        max-width: 300px; /* Ancho máximo para la imagen (ajústalo según tus necesidades) */
         height: auto; /* Mantiene la proporción original de la imagen */
         margin-right: 20px; /* Agrega espacio entre la imagen y el texto */
     }
@@ -348,6 +385,10 @@
         text-align: center; /* Alinea el texto al centro del círculo */
         padding: 5px 10px; /* Añade espacio dentro del círculo */
         font-size: 30px; /* Tamaño de fuente más grande */
+    }
+
+    .productos-containe {
+        text-align: center;
     }
 
 /*Estilos del pie de pagina*/
@@ -484,7 +525,7 @@
         right: 10px;
         width: 16px; /* Ancho y alto iguales para un fondo circular */
         height: 36px;
-        background-color: rgb(250, 246, 242);
+        background-color: rgb(255, 255, 255);
         border-radius: 50%; /* Hace que el fondo sea circular */
         display: flex;
         justify-content: center; /* Centra horizontalmente el contenido */
@@ -619,6 +660,10 @@
     }
 
     /*responsive apartado ofertas*/
+    .tofer{
+        margin-top: 130vh;
+    }
+
     .text-info h2 {
         font-size: 15px;
     }
@@ -631,8 +676,13 @@
         margin-left: 1vh;
     }
 
-    .botonL{
-        font-size: 10px;
+    .productos-containe {
+        text-align: center;
+    }
+
+
+    .botonL {
+        width: 200px; 
     }
 
 }

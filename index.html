@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIA ROBOTICS | HOME</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/faviconB.ico">
+    <link rel="stylesheet" href="estilos/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="estilos/slick-personalizado.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/374b632105.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <script>
+    window.addEventListener('mouseover', initLandbot, { once: true });
+    window.addEventListener('touchstart', initLandbot, { once: true });
+    var myLandbot;
+    function initLandbot() {
+      if (!myLandbot) {
+        var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+        s.addEventListener('load', function() {
+          myLandbot = new Landbot.Popup({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2067536-K5GR2ESGXUS65PPF/index.json',
+          });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+    </script>
+
+    <header>
+      <div id="logo">
+        <a href="index.html">
+            <img src="imagenes/logo_tia.png" alt="Logo">
+        </a>
+      </div>
+
+        <!-- Agrega los iconos de las redes sociales aquí -->
+  <div class="redes-sociales">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+      <!-- Agrega el botón de menú hamburguesa -->
+      <div id="menu-toggle" class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav>
+         <ul>
+          <li><a href="index.html" class="enlace current">INICIO</a></li>
+          <li><a href="ACERCA DE.html" class="enlace">ACERCA DE</a></li>
+          <li><a href="EXPERIENCIA.html" class="enlace">EXPERIENCIA</a></li>
+          <li><a href="EVENTOS.html" class="enlace">EVENTOS</a></li>
+          <li><a href="PROVEEDORES.html" class="enlace">PROVEEDORES</a></li>
+          <li>
+              <a class="enlace">PRODUCTOS</a>
+              <ul class="menu-vertical">
+                <li><a href="ABB.html"></a></li>
+                <li><a href="ABB.html">ABB</a></li>
+                <li><a href="AB.html">Allen Bradley</a></li>
+                <li><a href="VIPA.html">Vipa</a></li>
+                <li><a href="YASKAWA.html">SIEMENS</a></li>
+                <li><a href="INVERTEK.html">INVERTEK</a></li>
+                <li><a href="OFERTAS.html">Ofertas</a></li>
+              </ul>
+          </li>
+          <li><a href="CONTACTO.html" class="enlace">CONTACTO</a></li>
+        </ul>
+      </nav>
+        
+    </header>
+
+    <div class="videos-slider">
+        <div class="video">
+          <video width="100%" muted id="video1"> 
+            <source src="videos/vid1p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video">
+          <video width="100%" muted id="video2">
+            <source src="videos/vid3pDES.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video">
+          <video width="100%" muted id="video3">
+            <source src="videos/vid2p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video">
+          <video width="100%" muted id="video4">
+            <source src="videos/vid4p.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- Agregar más elementos de video según sea necesario -->
+    </div>
+
+    <footer>
+        <a href="https://www.facebook.com/TIAutomation" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/tia_robotics?igsh=MTJoOGt2azl2YjRzNg==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@tiarobotics?_t=8gaytUXJDQD&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.linkedin.com/company/tiasa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </footer>
+
+    
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="scripts/home.js"></script>
+
+</html>

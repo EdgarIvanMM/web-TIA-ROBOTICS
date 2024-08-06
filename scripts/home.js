@@ -2,10 +2,10 @@ $(document).ready(function() {
     // Inicializa el slider de videos una sola vez con las opciones necesarias
     $('.videos-slider').slick({
         autoplay: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 25000,
         dots: true,
         arrows: false
-    });
+    }); 
 
     // Agrega las flechas personalizadas al contenedor del slider
     $('.videos-slider').append('<div class="custom-prev-arrow"><i class="fas fa-chevron-left"></i></div>');
@@ -39,4 +39,50 @@ $(document).ready(function() {
     $('#menu-toggle').click(function() {
         $('nav').toggleClass('show');
     });
+
+    function changeVideo() {
+        var isMobile = window.innerWidth <= 768;
+        
+        // Cambia las fuentes de video según el tipo de dispositivo
+        if (isMobile) {
+        $('#video1 source').attr('src', 'videos/vid1pMOVIL.mp4');
+        $('#video2 source').attr('src', 'videos/vid3pMOVIL.mp4');
+        $('#video3 source').attr('src', 'videos/vid2pMOVIL.mp4');
+        $('#video4 source').attr('src', 'videos/vid4pMOVIL.mp4');
+        } else {
+      
+        }
+        
+        // Recarga las fuentes de video
+        $('.videos-slider').slick('slickGoTo', 0);
+        $('.videos-slider').slick('refresh');
+        
+        // Reproduce el nuevo primer video
+        var newVideo = $('#video1')[0];
+       
+        // Pausa el video actual antes de cargar y reproducir el nuevo video
+        $('.videos-slider').slick('slickPause');
+        
+        newVideo.load();
+        newVideo.play();
+        
+        // Cambia el elemento activeSlide del slider
+        $('.videos-slider').slick('slickGoTo', 1);
+    }
+    
+    // Llama a la función changeVideo al cargar la página
+    changeVideo();
+    
+    // Detecta cuando el primer video ha cargado y comienza a reproducir el slider
+    $('#video1').on('loadeddata', function () {
+        $('.videos-slider').slick('slickPlay');
+    });
+    
+    // Llama a la función changeVideo cuando la ventana cambia de tamaño
+    $(window).on('resize', function () {
+        changeVideo();
+    });
+    
+   
 });
+

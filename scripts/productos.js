@@ -3,7 +3,7 @@ var contactarBotones = document.querySelectorAll(".info-product button, .info-of
 
 contactarBotones.forEach(function (boton) {
     boton.addEventListener("click", function () {
-        document.getElementById("ventanaEmergente").style.display = "flex";
+    document.getElementById("ventanaEmergente").style.display = "flex";
     });
 });
 
