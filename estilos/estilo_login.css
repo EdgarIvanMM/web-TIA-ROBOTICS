@@ -66,7 +66,7 @@ a{
 }
 
 .gradient-text{
-    background: linear-gradient(to right, var(--green), var(--lead));
+    background: rgb(0, 0, 0);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -201,3 +201,34 @@ a{
 .form-content p{
     text-align: center;
 }
+
+/* Agrega estos estilos para centrar y cambiar el tamaño de los iconos */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #ffffff;*/
+    padding: -10px;
+  }
+  
+  footer a:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1.5px; /* Ancho de la línea */
+    height: 20px; /* Altura de la línea */
+    background-color: #1A3EDC; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el icono y la línea */
+  }
+  
+  footer a {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre los iconos */
+    color: #ffffff;
+    font-size: 25px; /* Tamaño de fuente de los iconos */
+    position: relative;
+  }
+  
+  /* Opcional: si deseas que los iconos tengan un efecto al pasar el mouse */
+  footer a:hover {
+    opacity: 0.7;
+  }
